@@ -333,7 +333,7 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 .bank { display: flex; flex-direction: column; gap: 6px; }
 .bank > div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: baseline; }
 .bank dt {
-  font-size: 0.8125rem; color: rgba(251, 247, 238, 0.55);
+  font-size: 0.8125rem; color: rgba(251, 247, 238, 0.6);
   letter-spacing: 0.04em; text-transform: uppercase;
 }
 .bank dd { font-family: var(--font-mono); font-size: 0.9375rem; }
@@ -346,7 +346,7 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 .bank button.copy:hover { background: rgba(201, 162, 74, 0.15); }
 .bank button.copy.copied { background: var(--brass); color: var(--navy); }
 .donate-card__note {
-  font-size: 0.8125rem; color: rgba(251, 247, 238, 0.5);
+  font-size: 0.8125rem; color: rgba(251, 247, 238, 0.65);
   margin-top: 4px;
 }
 .support__footnote {
