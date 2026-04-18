@@ -108,7 +108,9 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 /* --- Hero --- */
 .hero {
   position: relative;
-  background: var(--cream);
+  background:
+    radial-gradient(ellipse 58% 62% at 72% 48%, rgba(201, 162, 74, 0.22), rgba(201, 162, 74, 0) 62%),
+    linear-gradient(180deg, #FBF7EE 0%, #F4ECD5 100%);
   color: var(--ink);
   min-height: calc(100vh - 60px);
   display: flex; align-items: center;
@@ -116,12 +118,12 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
   padding-block: clamp(80px, 12vw, 160px);
   border-bottom: 1px solid var(--border);
 }
-.hero__motif {
-  position: absolute; inset: 0;
-  background-image: url('assets/motif.svg');
-  background-size: 160px 160px;
-  opacity: 0.10;
-  pointer-events: none;
+@media (max-width: 880px) {
+  .hero {
+    background:
+      radial-gradient(ellipse 72% 40% at 50% 30%, rgba(201, 162, 74, 0.22), rgba(201, 162, 74, 0) 65%),
+      linear-gradient(180deg, #FBF7EE 0%, #F4ECD5 100%);
+  }
 }
 .hero__inner {
   position: relative;
