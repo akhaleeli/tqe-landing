@@ -26,6 +26,7 @@ ul { list-style: none; }
   --font-display: 'EB Garamond', 'Georgia', serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-arabic: 'Scheherazade New', 'Amiri', 'Lateef', serif;
 
   --container: 1120px;
   --gutter: clamp(20px, 4vw, 48px);
@@ -319,6 +320,56 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 .timeline__dates { font-size: 0.9375rem; color: var(--muted); white-space: nowrap; }
 .timeline__launch .timeline__stage { color: var(--brass); font-weight: 500; }
 .timeline__launch .timeline__dot { width: 16px; height: 16px; left: -34px; }
+
+/* --- Latest verse card --- */
+.latest-verse {
+  max-width: 760px; margin: 0 auto 48px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: clamp(36px, 5vw, 56px) clamp(28px, 4vw, 48px);
+  text-align: center;
+  position: relative;
+}
+.latest-verse::before {
+  content: ''; position: absolute; top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 72px; height: 2px; background: var(--brass);
+  border-radius: 0 0 2px 2px;
+}
+.latest-verse__label {
+  font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--brass); font-weight: 500;
+  margin-bottom: 28px;
+}
+.latest-verse__arabic {
+  font-family: var(--font-arabic);
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+  line-height: 2;
+  color: var(--navy);
+  margin-bottom: 24px;
+  font-weight: 400;
+  direction: rtl;
+}
+.latest-verse__ref {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.latest-verse__ref strong {
+  color: var(--brass); font-weight: 500; font-style: normal;
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+}
+.latest-verse__english {
+  font-family: var(--font-display); font-style: italic;
+  color: var(--muted);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  max-width: 52ch; margin: 0 auto;
+}
 
 /* --- Funds --- */
 .funds {
