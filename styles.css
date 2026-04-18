@@ -354,3 +354,23 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
   color: rgba(251, 247, 238, 0.6); max-width: 720px;
   margin: 24px auto 0;
 }
+
+/* --- Footer --- */
+.footer { background: var(--cream); padding-block: 56px; border-top: 1px solid var(--border); }
+.footer__inner { text-align: center; }
+.footer__bismillah {
+  font-family: var(--font-display); font-size: 1.25rem;
+  color: var(--navy); margin-bottom: 12px;
+}
+.footer__small { font-size: 0.8125rem; color: var(--muted); }
+
+/* --- Reveal on scroll --- */
+.reveal {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 500ms ease, transform 500ms ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
