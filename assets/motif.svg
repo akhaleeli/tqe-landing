@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <pattern id="star8" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#C9A24A" stroke-width="0.8">
+        <polygon points="40,8 48,32 72,40 48,48 40,72 32,48 8,40 32,32" />
+        <polygon points="40,20 44,36 60,40 44,44 40,60 36,44 20,40 36,36" />
+        <circle cx="40" cy="40" r="3" />
+      </g>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#star8)" />
+</svg>
