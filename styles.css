@@ -276,3 +276,37 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 .funds__labels p { font-size: 1.0625rem; }
 .funds__labels p strong { font-family: var(--font-display); font-size: 1.25rem; color: var(--navy); }
 .funds__gap { color: var(--muted); margin-top: 4px; font-size: 0.9375rem; }
+
+/* --- Team --- */
+.team__grid {
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px;
+  margin-bottom: 64px;
+}
+@media (max-width: 880px) { .team__grid { grid-template-columns: 1fr; gap: 48px; } }
+.team__intro h3, .team__tafsirs h3 {
+  font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--brass); margin-bottom: 20px; font-weight: 500; font-family: var(--font-body);
+}
+.team__intro p { margin-bottom: 16px; max-width: 40ch; }
+.team__intro p strong { color: var(--brass); font-weight: 500; }
+.tafsirs {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px;
+}
+@media (max-width: 560px) { .tafsirs { grid-template-columns: 1fr; } }
+.tafsirs li { display: flex; flex-direction: column; }
+.tafsirs em {
+  font-family: var(--font-display); font-size: 1.125rem; color: var(--cream);
+}
+.tafsirs span {
+  font-size: 0.875rem; color: rgba(251, 247, 238, 0.6); margin-top: 2px;
+}
+.team__roles {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  padding-top: 48px; border-top: 1px solid var(--border-on-navy);
+}
+@media (max-width: 760px) { .team__roles { grid-template-columns: 1fr; } }
+.role h4 {
+  font-family: var(--font-display); font-size: 1.25rem; color: var(--brass);
+  margin-bottom: 8px; font-weight: 500;
+}
+.role p { font-size: 0.9375rem; color: rgba(251, 247, 238, 0.8); }
