@@ -216,3 +216,63 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 }
 .feature h3 { color: var(--brass); font-size: 1.125rem; margin-bottom: 8px; font-weight: 500; }
 .feature p { color: rgba(251, 247, 238, 0.8); font-size: 0.9375rem; }
+
+/* --- Progress --- */
+.progress__grid {
+  display: grid; grid-template-columns: auto 1fr; gap: 64px;
+  align-items: center; margin-bottom: 72px;
+}
+@media (max-width: 760px) {
+  .progress__grid { grid-template-columns: 1fr; gap: 48px; }
+}
+.progress__ring-wrap { position: relative; text-align: center; }
+.progress-ring { display: block; margin: 0 auto; }
+.progress__ring-text {
+  position: absolute; top: 110px; left: 0; right: 0;
+  display: flex; flex-direction: column; align-items: center;
+}
+.progress__ring-text strong {
+  font-family: var(--font-display); font-size: 2.25rem; color: var(--navy);
+}
+.progress__ring-text span {
+  font-size: 0.875rem; color: var(--muted); letter-spacing: 0.02em;
+}
+.progress__verse { margin-top: 24px; font-size: 1.0625rem; color: var(--ink); }
+.progress__verse strong { font-family: var(--font-display); color: var(--brass); font-size: 1.125rem; }
+.progress__updated { color: var(--muted); font-size: 0.875rem; margin-top: 4px; }
+
+/* --- Timeline --- */
+.timeline__title { font-size: 1.25rem; margin-bottom: 24px; }
+.timeline__list { border-left: 2px solid var(--border); padding-left: 24px; }
+.timeline__list li {
+  display: grid; grid-template-columns: 1fr auto; gap: 16px;
+  align-items: baseline; padding: 16px 0; position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.timeline__list li:last-child { border-bottom: none; }
+.timeline__dot {
+  position: absolute; left: -32px; top: 22px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--brass); box-shadow: 0 0 0 4px var(--cream);
+}
+.timeline__stage { font-family: var(--font-display); font-size: 1.125rem; color: var(--navy); }
+.timeline__dates { font-size: 0.9375rem; color: var(--muted); white-space: nowrap; }
+.timeline__launch .timeline__stage { color: var(--brass); font-weight: 500; }
+.timeline__launch .timeline__dot { width: 16px; height: 16px; left: -34px; }
+
+/* --- Funds --- */
+.funds {
+  max-width: 760px; margin: 0 auto; padding: 32px;
+  background: var(--white); border: 1px solid var(--border); border-radius: 8px;
+}
+.funds__bar {
+  height: 12px; background: var(--border); border-radius: 6px; overflow: hidden;
+  margin-bottom: 20px;
+}
+.funds__fill {
+  height: 100%; background: linear-gradient(90deg, var(--brass), var(--brass-light));
+  border-radius: 6px;
+}
+.funds__labels p { font-size: 1.0625rem; }
+.funds__labels p strong { font-family: var(--font-display); font-size: 1.25rem; color: var(--navy); }
+.funds__gap { color: var(--muted); margin-top: 4px; font-size: 0.9375rem; }
