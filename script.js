@@ -68,3 +68,46 @@
 
   targets.forEach(t => io.observe(t));
 })();
+
+// Lightbox — enlarges the sample spread on click
+(function lightbox() {
+  const triggers = document.querySelectorAll('[data-lightbox]');
+  if (!triggers.length) return;
+
+  let lastFocus = null;
+
+  function open(box) {
+    lastFocus = document.activeElement;
+    box.classList.add('is-open');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    const closeBtn = box.querySelector('.lightbox__close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function close(box) {
+    box.classList.remove('is-open');
+    box.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  triggers.forEach(trigger => {
+    const boxId = trigger.dataset.lightbox;
+    const box = document.getElementById(boxId);
+    if (!box) return;
+
+    trigger.addEventListener('click', () => open(box));
+
+    const closeBtn = box.querySelector('.lightbox__close');
+    if (closeBtn) closeBtn.addEventListener('click', () => close(box));
+
+    box.addEventListener('click', (e) => {
+      if (e.target === box) close(box);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && box.classList.contains('is-open')) close(box);
+    });
+  });
+})();

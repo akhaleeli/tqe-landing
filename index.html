@@ -95,9 +95,14 @@
       <h2>One page of Qur'an.<br><span class="accent">One page of commentary.</span></h2>
       <p class="lead">A unique dual-page design, structured so readers can read the Arabic and its commentary in direct tandem — clear, paced, and always in context.</p>
     </div>
-    <figure class="sample-page">
-      <img src="assets/sample-page.png" alt="Sample page from The Qur'an: Explained — Sūrat al-Baqara, page 42" loading="lazy">
-      <figcaption>Sample page — Sūrat al-Baqara</figcaption>
+    <figure class="sample-spread">
+      <button type="button" class="sample-spread__trigger" aria-label="Enlarge sample pages" data-lightbox="sampleLightbox">
+        <span class="sample-spread__pages">
+          <img src="assets/sample-page-1.png" alt="Page 42 — Arabic text of Sūrat al-Baqara with numbered English translation" loading="lazy">
+          <img src="assets/sample-page-2.png" alt="Page 43 — commentary for Sūrat al-Baqara, verses 2:120–2:126" loading="lazy">
+        </span>
+      </button>
+      <figcaption>Sample pages — Sūrat al-Baqara &nbsp;·&nbsp; <em>click to enlarge</em></figcaption>
     </figure>
     <div class="cards cards--2 book__features">
       <div class="feature">
@@ -279,6 +284,14 @@
   </div>
 </section>
   </main>
+
+  <div class="lightbox" id="sampleLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Sample pages enlarged">
+    <button type="button" class="lightbox__close" aria-label="Close sample pages">×</button>
+    <div class="lightbox__content">
+      <img src="assets/sample-page-1.png" alt="Page 42 — Arabic text of Sūrat al-Baqara with numbered English translation">
+      <img src="assets/sample-page-2.png" alt="Page 43 — commentary for Sūrat al-Baqara, verses 2:120–2:126">
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container footer__inner">
