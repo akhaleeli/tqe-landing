@@ -63,8 +63,8 @@ em, i { font-style: italic; }
 }
 .btn--primary { background: var(--brass); color: var(--navy); box-shadow: var(--shadow-sm); }
 .btn--primary:hover { background: var(--brass-light); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.btn--ghost { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
-.btn--ghost:hover { background: var(--navy); color: var(--cream); transform: translateY(-2px); }
+.btn--ghost { background: transparent; color: var(--brass); border: 1.5px solid var(--brass); }
+.btn--ghost:hover { background: var(--brass); color: var(--navy); transform: translateY(-2px); }
 
 /* --- Links --- */
 a.inline-link { position: relative; color: var(--brass); }
@@ -109,20 +109,21 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 .hero {
   position: relative;
   background:
-    radial-gradient(ellipse 58% 62% at 72% 48%, rgba(201, 162, 74, 0.22), rgba(201, 162, 74, 0) 62%),
-    linear-gradient(180deg, #FBF7EE 0%, #F4ECD5 100%);
-  color: var(--ink);
+    radial-gradient(ellipse 55% 60% at 72% 48%, rgba(201, 162, 74, 0.22), rgba(201, 162, 74, 0) 65%),
+    linear-gradient(180deg, #0A1F3C 0%, #1A3A63 100%);
+  color: var(--cream);
   min-height: calc(100vh - 60px);
   display: flex; align-items: center;
   overflow: hidden;
   padding-block: clamp(80px, 12vw, 160px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-on-navy);
 }
+.hero .lead { color: rgba(251, 247, 238, 0.82); }
 @media (max-width: 880px) {
   .hero {
     background:
-      radial-gradient(ellipse 72% 40% at 50% 30%, rgba(201, 162, 74, 0.22), rgba(201, 162, 74, 0) 65%),
-      linear-gradient(180deg, #FBF7EE 0%, #F4ECD5 100%);
+      radial-gradient(ellipse 72% 42% at 50% 28%, rgba(201, 162, 74, 0.22), rgba(201, 162, 74, 0) 68%),
+      linear-gradient(180deg, #0A1F3C 0%, #1A3A63 100%);
   }
 }
 .hero__inner {
@@ -147,7 +148,7 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 .hero__visual { display: flex; justify-content: center; perspective: 1200px; }
 .hero__cover {
   max-width: 320px; width: 100%;
-  filter: drop-shadow(0 24px 32px rgba(14, 39, 72, 0.28));
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.55));
   transform-style: preserve-3d;
   transition: transform 200ms ease-out;
   will-change: transform;
