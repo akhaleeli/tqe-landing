@@ -24,3 +24,24 @@
   hero.addEventListener('pointermove', onMove);
   hero.addEventListener('pointerleave', onLeave);
 })();
+
+// Click-to-copy for bank details
+(function copyDetails() {
+  document.querySelectorAll('button.copy').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const value = btn.dataset.copy || btn.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(value);
+        btn.classList.add('copied');
+        const original = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.textContent = original;
+        }, 1400);
+      } catch (err) {
+        console.warn('Copy failed', err);
+      }
+    });
+  });
+})();

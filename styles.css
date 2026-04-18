@@ -310,3 +310,47 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
   margin-bottom: 8px; font-weight: 500;
 }
 .role p { font-size: 0.9375rem; color: rgba(251, 247, 238, 0.8); }
+
+/* --- Why support --- */
+.why__cards .card h3 { color: var(--navy); }
+
+/* --- How to support --- */
+.support__grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+  margin-bottom: 32px;
+}
+@media (max-width: 760px) { .support__grid { grid-template-columns: 1fr; } }
+.donate-card {
+  background: var(--navy-light); border: 1px solid var(--border-on-navy);
+  border-radius: 8px; padding: 32px;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+.donate-card:hover { transform: translateY(-2px); border-color: var(--brass); }
+.donate-card h3 { color: var(--brass); font-size: 1.375rem; }
+.donate-card p { color: rgba(251, 247, 238, 0.85); font-size: 0.9375rem; flex: 1; }
+.donate-card .btn { align-self: flex-start; }
+.bank { display: flex; flex-direction: column; gap: 6px; }
+.bank > div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: baseline; }
+.bank dt {
+  font-size: 0.8125rem; color: rgba(251, 247, 238, 0.55);
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+.bank dd { font-family: var(--font-mono); font-size: 0.9375rem; }
+.bank button.copy {
+  color: var(--cream); text-align: left;
+  padding: 4px 6px; margin: -4px -6px; border-radius: 4px;
+  transition: background 150ms ease;
+  font-family: inherit;
+}
+.bank button.copy:hover { background: rgba(201, 162, 74, 0.15); }
+.bank button.copy.copied { background: var(--brass); color: var(--navy); }
+.donate-card__note {
+  font-size: 0.8125rem; color: rgba(251, 247, 238, 0.5);
+  margin-top: 4px;
+}
+.support__footnote {
+  text-align: center; font-size: 0.875rem;
+  color: rgba(251, 247, 238, 0.6); max-width: 720px;
+  margin: 24px auto 0;
+}
