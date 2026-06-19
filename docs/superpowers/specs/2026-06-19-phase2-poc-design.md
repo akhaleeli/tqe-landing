@@ -78,6 +78,14 @@ One small JSON per day: ordered list of verses `{ ar, en, ar_audio, en_audio }` 
 Real daily scheduling/rotation, the full corpus, transactional email sends, accounts,
 streaks/gamification, the native app (Phase 3).
 
+## Roadmap (beyond this POC)
+
+- **Interactive online reader** — a browsable reader showing, for the verses on screen, the
+  Arabic, the translation, and the commentary notes together (read freely, not just the
+  guided daily page). Leans toward **Phase 3** (the full learning platform) rather than
+  Phase 2. Not actioned now; captured for the roadmap. The `/daily` POC's data model
+  (per-verse AR/EN + page-level notes) is a natural foundation for it.
+
 ## Decisions made
 
 - Commentary voice: **Steve – Calm and Grounding Narrator** (`HJlUPggR4CCkl0gC427J`),
