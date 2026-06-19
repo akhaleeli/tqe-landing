@@ -466,9 +466,15 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
   margin: 24px auto 0;
 }
 
+.support__contact {
+  text-align: center; font-size: 0.9375rem;
+  color: rgba(251, 247, 238, 0.82); margin: 28px auto 0;
+}
+
 /* --- Footer --- */
 .footer { background: var(--cream); padding-block: 56px; border-top: 1px solid var(--border); }
 .footer__inner { text-align: center; }
+.footer__contact { font-size: 0.9375rem; color: var(--muted); margin-bottom: 10px; }
 .footer__bismillah {
   font-family: var(--font-display); font-size: 1.25rem;
   color: var(--navy); margin-bottom: 12px;
