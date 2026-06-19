@@ -213,10 +213,12 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
   font-family: var(--font-display); font-size: 1rem; font-weight: 500;
   margin-bottom: 14px; color: var(--muted);
 }
-.phase__tag--current { font-style: italic; color: var(--navy); }
+.phase__tag--current { font-style: italic; color: var(--brass); }
 .phase--planned .phase__tag { font-style: normal; color: rgba(201, 162, 74, 0.75); }
-.phase--current { background: rgba(14, 39, 72, 0.05); border-color: var(--navy); }
-.phase--planned { opacity: 0.9; }
+.phase--current { background: var(--navy); border-color: var(--navy); box-shadow: var(--shadow-md); }
+.phase--current h3 { color: var(--cream); }
+.phase--current p { color: rgba(251, 247, 238, 0.85); }
+.phase--current .card__icon { color: var(--navy); background: var(--brass); }
 .phase--planned .card__icon { color: var(--muted); background: rgba(14, 39, 72, 0.05); }
 
 /* --- Sample spread (§4) --- */
