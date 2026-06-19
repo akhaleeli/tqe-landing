@@ -38,9 +38,9 @@ converts to subscribers. (Decision: option **(c)** — demo + real capture.)
 - **English verse translation:** **already generated** for the whole Qur'an in the "Frank"
   voice (reuse from TSQ — see Assets). Display text = the matching **revised/modified
   Qarai** wording, so on-screen text and audio agree.
-- **Commentary narration:** generate fresh with **ElevenLabs v3**, a **new British male,
-  educated-sounding voice** (auditioning **George** `JBFqnCBsd6RMkjVDRZzb` vs **Daniel**
-  `onwK4e9ZLuTAKqWW03F9` — decision pending). Script follows
+- **Commentary narration:** generate fresh with **ElevenLabs v3**. Voice (chosen via
+  audition, 2026-06-19): **"Steve – Calm and Grounding Narrator"** (American, middle-aged),
+  `HJlUPggR4CCkl0gC427J` — distinct from the "Frank" verse voice. Script follows
   `docs/commentary-narration-style.md` (Arabic terms in Arabic script; numbers as words).
 - **Tight pacing (change from TSQ):** fragments carry ~0.9s baked silence each. Trim
   leading/trailing silence at build time (`ffmpeg silenceremove`); player adds a small
@@ -78,7 +78,13 @@ One small JSON per day: ordered list of verses `{ ar, en, ar_audio, en_audio }` 
 Real daily scheduling/rotation, the full corpus, transactional email sends, accounts,
 streaks/gamification, the native app (Phase 3).
 
+## Decisions made
+
+- Commentary voice: **Steve – Calm and Grounding Narrator** (`HJlUPggR4CCkl0gC427J`),
+  ElevenLabs v3 — chosen by audition 2026-06-19 ("for now"). Auditions saved in
+  `/tmp/tsq-audition/`.
+
 ## Open decisions
 
-- Commentary voice: **George vs Daniel** — resolve via a short v3 audition.
-- Commentary source text for pages 1–3: pull from the book commentary files (need locating + prep).
+- Commentary source text for pages 1–3: pull from the book commentary files (Muntakhab
+  al-Tafāsīr — Part 1 docx located in OneDrive; need to extract/prep per-page notes).
