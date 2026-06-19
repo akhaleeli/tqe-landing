@@ -16,8 +16,9 @@ thing must feel like serious scholarship rather than a campaign landing page.
 
 - **Ship ASAP.** User has donors waiting; priority is a shareable URL today or
   tomorrow, not a perfect site.
-- **No DNS / backend access** to `quraniverse.ai` yet. Deploy to a `pages.dev`
-  subdomain now; migrate to a proper subdomain/path later without code changes.
+- **Primary domain is `quraniverse.io`** (the `.ai` is held by an inactive third
+  party; `.io` serves as primary until `.ai` access is restored). The page is
+  served at the apex `quraniverse.io`, with `www` redirecting to it.
 - **Minimum admin overhead.** Progress number updated manually (one edit, one
   commit); no email gate, no mailing list tooling, no CMS for this iteration.
 - **No photo of the translator.** Page is about the project, not the person.
@@ -228,8 +229,8 @@ link (address TBD at deploy time).
 - New Cloudflare Pages project connected to the repo, auto-deploys from `main`.
 - `pages.dev` URL: `quran-explained.pages.dev`.
 - Build command: none (pure static). Output directory: root.
-- A future custom domain (`quraniverse.ai/explained` or
-  `explained.quraniverse.ai`) is a Cloudflare dashboard change; no code edits.
+- Custom domain `quraniverse.io` (apex, with `www` → apex redirect) is attached
+  to the Pages project via Cloudflare; DNS is on Cloudflare nameservers.
 
 ## Deferred / not in scope
 
