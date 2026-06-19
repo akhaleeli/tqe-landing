@@ -189,17 +189,18 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 .card p { color: var(--muted); font-size: 0.9375rem; line-height: 1.55; }
 
 /* --- Project phases --- */
+.phases__note { text-align: center; max-width: 640px; margin: 14px auto 0; color: var(--muted); font-size: 1.0625rem; }
+.phases__note em { font-style: italic; }
 .phase__tag {
-  display: inline-block; align-self: flex-start;
-  font-family: var(--font-body); font-size: 0.6875rem; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 4px 11px; border-radius: 999px; margin-bottom: 18px;
-  background: rgba(14, 39, 72, 0.06); color: var(--muted);
-  border: 1px solid var(--border);
+  display: inline-block;
+  font-family: var(--font-display); font-size: 1rem; font-weight: 500;
+  margin-bottom: 14px; color: var(--muted);
 }
-.phase__tag--current { background: var(--brass); color: var(--navy); border-color: var(--brass); }
-.phase--current { border-color: var(--brass); box-shadow: var(--shadow-sm); }
-.phase--planned .card__icon { color: var(--muted); background: rgba(14, 39, 72, 0.06); }
+.phase__tag--current { font-style: italic; color: var(--navy); }
+.phase--planned .phase__tag { font-style: normal; color: rgba(201, 162, 74, 0.75); }
+.phase--current { background: rgba(14, 39, 72, 0.05); border-color: var(--navy); }
+.phase--planned { opacity: 0.9; }
+.phase--planned .card__icon { color: var(--muted); background: rgba(14, 39, 72, 0.05); }
 
 /* --- Sample spread (§4) --- */
 .sample-spread {
