@@ -49,7 +49,7 @@ em, i { font-style: italic; }
 
 /* --- Layout primitives --- */
 .container { max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
-.section { padding-block: var(--section-pad); }
+.section { padding-block: var(--section-pad); scroll-margin-top: 80px; }
 .section--navy { background: var(--navy); color: var(--cream); }
 .section--navy h1, .section--navy h2, .section--navy h3 { color: var(--cream); }
 .section--navy p { color: rgba(251, 247, 238, 0.85); }
@@ -101,9 +101,26 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 }
 .nav__brand em { color: var(--brass); font-style: italic; }
 .nav__cta { padding: 10px 20px; font-size: 0.9375rem; }
+.nav__links { display: flex; gap: 28px; }
+.nav__links a {
+  position: relative; color: rgba(251, 247, 238, 0.8);
+  font-size: 0.9375rem; font-weight: 500; letter-spacing: 0.01em;
+  transition: color 160ms ease;
+}
+.nav__links a:hover { color: var(--cream); }
+.nav__links a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -5px; height: 1.5px;
+  background: var(--brass); transform: scaleX(0); transform-origin: right;
+  transition: transform 200ms ease;
+}
+.nav__links a:hover::after { transform: scaleX(1); transform-origin: left; }
+@media (max-width: 860px) { .nav__links { display: none; } }
+.nav__cta-short { display: none; }
 @media (max-width: 540px) {
-  .nav__brand { font-size: 1.0625rem; }
+  .nav__brand { font-size: 1rem; }
   .nav__cta { padding: 8px 14px; font-size: 0.875rem; }
+  .nav__cta-long { display: none; }
+  .nav__cta-short { display: inline; }
 }
 
 /* --- Hero --- */
