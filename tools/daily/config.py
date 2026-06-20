@@ -10,10 +10,13 @@ RECITERS = {
     "afasy": "Alafasy_128kbps",
     "sudais": "Abdurrahmaan_As-Sudais_192kbps",
 }
+FRANK_VOICE = "a1TnjruAs5jTzdrjL8Vd"
 STEVE_VOICE = "HJlUPggR4CCkl0gC427J"
 CELESTE_VOICE = "wSRCyzJYBsTZLFcumuu8"
 # English-translation voices: v1 = Frank (reuse existing TSQ files, None); others = ElevenLabs voice id
 EN_VOICES = {"v1": None, "v2": STEVE_VOICE, "celeste": CELESTE_VOICE}
+# Commentary/intro voices (all generated fresh via ElevenLabs)
+COMMENTARY_VOICES = {"v1": FRANK_VOICE, "v2": STEVE_VOICE, "celeste": CELESTE_VOICE}
 EL_MODEL = "eleven_v3"
 GAP_MS = 200
 

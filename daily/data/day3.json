@@ -2,11 +2,58 @@
   "day": 3,
   "page": 3,
   "surah": "al-Baqara",
+  "range": [
+    6,
+    16
+  ],
   "intro": {
-    "audio": "audio/day3_intro.mp3",
-    "dur": 5.355
+    "v1": {
+      "audio": "audio/day3_intro_v1.mp3",
+      "dur": 7.732
+    },
+    "v2": {
+      "audio": "audio/day3_intro_v2.mp3",
+      "dur": 5.355
+    },
+    "celeste": {
+      "audio": "audio/day3_intro_celeste.mp3",
+      "dur": 5.381
+    }
   },
   "verses": [
+    {
+      "ref": "Bismillah",
+      "ar": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "en": "In the Name of God, the Compassionate, the Merciful.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/001001_ar_husary.mp3",
+          "dur": 4.911
+        },
+        "afasy": {
+          "audio": "audio/001001_ar_afasy.mp3",
+          "dur": 6.06
+        },
+        "sudais": {
+          "audio": "audio/001001_ar_sudais.mp3",
+          "dur": 3.135
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/001001_en_v1.mp3",
+          "dur": 3.37
+        },
+        "v2": {
+          "audio": "audio/001001_en_v2.mp3",
+          "dur": 3.553
+        },
+        "celeste": {
+          "audio": "audio/001001_en_celeste.mp3",
+          "dur": 3.422
+        }
+      }
+    },
     {
       "ref": "2:6",
       "ar": "إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنْذَرْتَهُمْ أَمْ لَمْ تُنْذِرْهُمْ لَا يُؤْمِنُونَ",
@@ -376,8 +423,20 @@
       "ref": "2:6",
       "title": "The faithless who refuse guidance",
       "text": "Here 'those who disbelieve' (<em>alladhīna kafarū</em>) does not mean every non-believer, but those set firmly upon denial — whose hearts are overtaken by hostility to the truth and who spare no effort fighting against God's religion. For such people, warning and admonition no longer make a difference.",
-      "audio": "audio/day3_note0.mp3",
-      "dur": 22.204,
+      "audio": {
+        "v1": {
+          "audio": "audio/day3_note0_v1.mp3",
+          "dur": 24.111
+        },
+        "v2": {
+          "audio": "audio/day3_note0_v2.mp3",
+          "dur": 22.204
+        },
+        "celeste": {
+          "audio": "audio/day3_note0_celeste.mp3",
+          "dur": 21.786
+        }
+      },
       "sources": [
         "al-Mīzān 1/55"
       ]
@@ -386,8 +445,20 @@
       "ref": "2:10",
       "title": "The heart — the essence of the human being",
       "text": "When the Qur'an speaks of the 'heart' (<em>qalb</em>), it means the very essence of the human being — their life and soul. Just as the body knows health, sickness, and death, so too does the heart: it can be sound, diseased, or dead. Hypocrisy is a sickness of the heart that, left untreated, only spreads.",
-      "audio": "audio/day3_note1.mp3",
-      "dur": 25.626,
+      "audio": {
+        "v1": {
+          "audio": "audio/day3_note1_v1.mp3",
+          "dur": 26.018
+        },
+        "v2": {
+          "audio": "audio/day3_note1_v2.mp3",
+          "dur": 25.626
+        },
+        "celeste": {
+          "audio": "audio/day3_note1_celeste.mp3",
+          "dur": 22.361
+        }
+      },
       "sources": [
         "al-Mīzān 2/228"
       ]
@@ -396,8 +467,20 @@
       "ref": "2:14",
       "title": "Shayṭān",
       "text": "The word 'shayṭān' (<em>shayṭān</em>) means one far removed from goodness — a being of evil. It is not only Iblīs: because he was driven so far from God's mercy, he became the very embodiment of evil, so that 'shayṭān' came to function almost as a proper name for him — though it can describe any rebellious, corrupting force.",
-      "audio": "audio/day3_note2.mp3",
-      "dur": 27.925,
+      "audio": {
+        "v1": {
+          "audio": "audio/day3_note2_v1.mp3",
+          "dur": 26.436
+        },
+        "v2": {
+          "audio": "audio/day3_note2_v2.mp3",
+          "dur": 27.925
+        },
+        "celeste": {
+          "audio": "audio/day3_note2_celeste.mp3",
+          "dur": 23.771
+        }
+      },
       "sources": [
         "al-Kashshāf 1/65",
         "al-Mīzān 7/331"

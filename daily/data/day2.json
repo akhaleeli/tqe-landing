@@ -2,11 +2,58 @@
   "day": 2,
   "page": 2,
   "surah": "al-Baqara",
+  "range": [
+    1,
+    5
+  ],
   "intro": {
-    "audio": "audio/day2_intro.mp3",
-    "dur": 6.478
+    "v1": {
+      "audio": "audio/day2_intro_v1.mp3",
+      "dur": 7.314
+    },
+    "v2": {
+      "audio": "audio/day2_intro_v2.mp3",
+      "dur": 6.478
+    },
+    "celeste": {
+      "audio": "audio/day2_intro_celeste.mp3",
+      "dur": 5.068
+    }
   },
   "verses": [
+    {
+      "ref": "Bismillah",
+      "ar": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "en": "In the Name of God, the Compassionate, the Merciful.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/001001_ar_husary.mp3",
+          "dur": 4.911
+        },
+        "afasy": {
+          "audio": "audio/001001_ar_afasy.mp3",
+          "dur": 6.06
+        },
+        "sudais": {
+          "audio": "audio/001001_ar_sudais.mp3",
+          "dur": 3.135
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/001001_en_v1.mp3",
+          "dur": 3.37
+        },
+        "v2": {
+          "audio": "audio/001001_en_v2.mp3",
+          "dur": 3.553
+        },
+        "celeste": {
+          "audio": "audio/001001_en_celeste.mp3",
+          "dur": 3.422
+        }
+      }
+    },
     {
       "ref": "2:1",
       "ar": "الم",
@@ -28,15 +75,15 @@
       "en_audio": {
         "v1": {
           "audio": "audio/002001_en_v1.mp3",
-          "dur": 2.011
+          "dur": 3.161
         },
         "v2": {
           "audio": "audio/002001_en_v2.mp3",
-          "dur": 2.273
+          "dur": 2.325
         },
         "celeste": {
           "audio": "audio/002001_en_celeste.mp3",
-          "dur": 2.116
+          "dur": 2.534
         }
       }
     },
@@ -178,8 +225,20 @@
       "ref": null,
       "title": "General remarks on al-Baqara",
       "text": "Much of this chapter calls God's servants to believe in all the divine scriptures, drawing no distinction between His messengers. It rebukes the disbelievers, the hypocrites, and some of the People of the Book, and sets out the path of guidance for the God-conscious.",
-      "audio": "audio/day2_note0.mp3",
-      "dur": 19.801,
+      "audio": {
+        "v1": {
+          "audio": "audio/day2_note0_v1.mp3",
+          "dur": 21.238
+        },
+        "v2": {
+          "audio": "audio/day2_note0_v2.mp3",
+          "dur": 19.801
+        },
+        "celeste": {
+          "audio": "audio/day2_note0_celeste.mp3",
+          "dur": 20.271
+        }
+      },
       "sources": [
         "al-Mīzān 1/46"
       ]
@@ -188,8 +247,20 @@
       "ref": "2:1",
       "title": "The Disconnected Letters",
       "text": "The opening 'disconnected letters' (<em>al-ḥurūf al-muqaṭṭaʿa</em>) have been read in many ways. Two of the most striking: that they are a secret between God and His Messenger, known only to them; and that, by opening with the very letters of the Arabic alphabet, God signals that this inimitable Qur'an is built from the same letters people use every day — yet none can match it.",
-      "audio": "audio/day2_note1.mp3",
-      "dur": 26.828,
+      "audio": {
+        "v1": {
+          "audio": "audio/day2_note1_v1.mp3",
+          "dur": 27.794
+        },
+        "v2": {
+          "audio": "audio/day2_note1_v2.mp3",
+          "dur": 26.828
+        },
+        "celeste": {
+          "audio": "audio/day2_note1_celeste.mp3",
+          "dur": 24.79
+        }
+      },
       "sources": [
         "al-Ṣāfī 1/90",
         "Nimūnah 1/62"
@@ -199,8 +270,20 @@
       "ref": "2:2",
       "title": "Guidance",
       "text": "'Guidance' (<em>hidāya</em>) means showing someone the way so that they actually reach the destination; a guide (<em>hādī</em>) leads people and shows them the path. Here, as in many verses, God calls the Qur'an a book of guidance — yet its full guidance is received only by those who come to it with God-consciousness.",
-      "audio": "audio/day2_note2.mp3",
-      "dur": 25.887,
+      "audio": {
+        "v1": {
+          "audio": "audio/day2_note2_v1.mp3",
+          "dur": 24.372
+        },
+        "v2": {
+          "audio": "audio/day2_note2_v2.mp3",
+          "dur": 25.887
+        },
+        "celeste": {
+          "audio": "audio/day2_note2_celeste.mp3",
+          "dur": 24.738
+        }
+      },
       "sources": [
         "al-Kashshāf 1/35",
         "Majmaʿ al-Bayān 1/65"
@@ -210,8 +293,20 @@
       "ref": "2:3",
       "title": "Sustenance is more than food and drink",
       "text": "'Sustenance' (<em>rizq</em>) is a gift granted continually and in due measure — sometimes used like 'share' (<em>naṣīb</em>) or 'provision' (<em>matāʿ</em>). It is far wider than food and drink: knowledge, faith, and every blessing given to a person according to their needs is part of God's sustenance.",
-      "audio": "audio/day2_note3.mp3",
-      "dur": 22.753,
+      "audio": {
+        "v1": {
+          "audio": "audio/day2_note3_v1.mp3",
+          "dur": 25.626
+        },
+        "v2": {
+          "audio": "audio/day2_note3_v2.mp3",
+          "dur": 22.753
+        },
+        "celeste": {
+          "audio": "audio/day2_note3_celeste.mp3",
+          "dur": 21.656
+        }
+      },
       "sources": [
         "Payām-i Qurʾān 4/307",
         "Aṭyab al-Bayān 1/210"

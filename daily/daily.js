@@ -3,7 +3,7 @@ const DAYS = [1, 2, 3];
 const SPEEDS = [1, 1.25, 1.5, 2];
 const SUBSCRIBE_URL = "https://quraniverse-subscribe.akh-apps.workers.dev";
 
-const settings = { reciter: "husary", voice: "v2", ar: true, en: true, cmt: true, order: "verses" };
+const settings = { reciter: "husary", voice: "v2", cvoice: "v2", ar: true, en: true, cmt: true, order: "verses" };
 
 let current = null;
 let queue = [];
@@ -26,8 +26,8 @@ const fmt = (s) => {
 /* ---- step builders (resolve to the currently-selected variant) ---- */
 const arStep = (i) => { const a = current.verses[i].ar_audio[settings.reciter]; return { mode: "ar", vi: i, src: a.audio, dur: a.dur }; };
 const enStep = (i) => { const a = current.verses[i].en_audio[settings.voice]; return { mode: "en", vi: i, src: a.audio, dur: a.dur }; };
-const noteStep = (i) => { const n = current.notes[i]; return { mode: "note", ni: i, src: n.audio, dur: n.dur }; };
-const introStep = () => ({ mode: "intro", src: current.intro.audio, dur: current.intro.dur });
+const noteStep = (i) => { const a = current.notes[i].audio[settings.cvoice]; return { mode: "note", ni: i, src: a.audio, dur: a.dur }; };
+const introStep = () => { const a = current.intro[settings.cvoice]; return { mode: "intro", src: a.audio, dur: a.dur }; };
 
 function buildQueue() {
   const q = [introStep()];
@@ -55,10 +55,8 @@ function buildQueue() {
 async function loadDay(n) {
   current = await (await fetch(`data/day${n}.json`)).json();
   stop();
-  const first = current.verses[0].ref.split(":")[1];
-  const last = current.verses[current.verses.length - 1].ref.split(":")[1];
   $("#dsurah").textContent = `Sūrat ${current.surah}`;
-  $("#dref").textContent = `· Verses ${first}–${last}`;
+  $("#dref").textContent = `· Verses ${current.range[0]}–${current.range[1]}`;
 
   const ol = $("#verses");
   ol.innerHTML = "";
@@ -201,6 +199,7 @@ function cycleSpeed() {
 function applySettings() {
   settings.reciter = $("#setReciter").value;
   settings.voice = $("#setVoice").value;
+  settings.cvoice = $("#setCvoice").value;
   settings.ar = $("#tAr").checked;
   settings.en = $("#tEn").checked;
   settings.cmt = $("#tCmt").checked;
@@ -247,8 +246,9 @@ function init() {
   // defaults
   $("#setReciter").value = settings.reciter;
   $("#setVoice").value = settings.voice;
+  $("#setCvoice").value = settings.cvoice;
   $("#setOrder").value = settings.order;
-  ["setReciter", "setVoice", "setOrder", "tAr", "tEn", "tCmt"].forEach((id) =>
+  ["setReciter", "setVoice", "setCvoice", "setOrder", "tAr", "tEn", "tCmt"].forEach((id) =>
     $("#" + id).addEventListener("change", applySettings)
   );
   $("#subForm").addEventListener("submit", subscribe);
