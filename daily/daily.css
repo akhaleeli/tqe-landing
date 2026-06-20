@@ -64,6 +64,8 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--cream);col
 
 /* commentary notes panel */
 .notes{display:flex;flex-direction:column;gap:14px}
+.notes.is-hidden{display:none}
+.verses .note{margin:6px 0 4px}
 .notes__head{font-family:'EB Garamond',serif;color:var(--navy);font-size:1.25rem;margin:0 0 2px;font-weight:500}
 .note{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 18px}
 .note h3{font-family:'EB Garamond',serif;color:var(--navy);margin:0 0 6px;font-size:1.12rem;font-weight:500}

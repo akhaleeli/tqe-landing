@@ -6,6 +6,7 @@ const SUBSCRIBE_URL = "https://quraniverse-subscribe.akh-apps.workers.dev";
 const settings = { reciter: "husary", voice: "v2", cvoice: "v2", ar: true, en: true, cmt: true, order: "verses" };
 
 let current = null;
+let noteEls = [];
 let queue = [];
 let total = 0;
 let qi = 0;
@@ -61,7 +62,7 @@ async function loadDay(n) {
   const ol = $("#verses");
   ol.innerHTML = "";
   current.verses.forEach((v, i) => {
-    const li = document.createElement("li");
+    const li = document.createElement("div");
     li.className = "verse";
     li.dataset.i = i;
     li.dataset.ref = v.ref;
@@ -76,6 +77,7 @@ async function loadDay(n) {
 
   const panel = $("#notes");
   panel.innerHTML = '<h2 class="notes__head">Commentary</h2>';
+  noteEls = [];
   current.notes.forEach((nt, i) => {
     const art = document.createElement("article");
     art.className = "note";
@@ -91,6 +93,7 @@ async function loadDay(n) {
       art.addEventListener("mouseenter", () => linked() && linked().classList.add("is-linked"));
       art.addEventListener("mouseleave", () => linked() && linked().classList.remove("is-linked"));
     }
+    noteEls.push(art);
     panel.appendChild(art);
   });
 
@@ -99,6 +102,31 @@ async function loadDay(n) {
   );
   buildQueue();
   updateBar();
+  layoutNotes();
+}
+
+// On mobile + interleaved order, move note cards inline between the verses they
+// follow (matching the audio order). Otherwise keep them in the commentary panel.
+function layoutNotes() {
+  const ol = $("#verses");
+  const panel = $("#notes");
+  const inline = settings.order === "interleave" &&
+    window.matchMedia("(max-width: 999px)").matches;
+  if (inline) {
+    panel.classList.add("is-hidden");
+    current.notes.forEach((nt, i) => {
+      const el = noteEls[i];
+      if (nt.ref === null) {
+        ol.insertBefore(el, ol.firstChild);
+      } else {
+        const v = ol.querySelector(`.verse[data-ref="${nt.ref}"]`);
+        if (v) v.after(el); else ol.appendChild(el);
+      }
+    });
+  } else {
+    panel.classList.remove("is-hidden");
+    noteEls.forEach((el) => panel.appendChild(el)); // restore in order
+  }
 }
 
 /* ---- playback ---- */
@@ -207,6 +235,7 @@ function applySettings() {
   stop();
   buildQueue();
   updateBar();
+  layoutNotes();
 }
 
 /* ---- subscribe ---- */
@@ -252,6 +281,7 @@ function init() {
     $("#" + id).addEventListener("change", applySettings)
   );
   $("#subForm").addEventListener("submit", subscribe);
+  window.matchMedia("(max-width: 999px)").addEventListener("change", layoutNotes);
   loadDay(1);
 }
 
