@@ -1,0 +1,221 @@
+{
+  "day": 2,
+  "page": 2,
+  "surah": "al-Baqara",
+  "intro": {
+    "audio": "audio/day2_intro.mp3",
+    "dur": 6.478
+  },
+  "verses": [
+    {
+      "ref": "2:1",
+      "ar": "الم",
+      "en": "اَلِفْ – لَامْ – مِيمْ",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002001_ar_husary.mp3",
+          "dur": 8.568
+        },
+        "afasy": {
+          "audio": "audio/002001_ar_afasy.mp3",
+          "dur": 7.654
+        },
+        "sudais": {
+          "audio": "audio/002001_ar_sudais.mp3",
+          "dur": 7.131
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002001_en_v1.mp3",
+          "dur": 2.011
+        },
+        "v2": {
+          "audio": "audio/002001_en_v2.mp3",
+          "dur": 2.273
+        },
+        "celeste": {
+          "audio": "audio/002001_en_celeste.mp3",
+          "dur": 2.116
+        }
+      }
+    },
+    {
+      "ref": "2:2",
+      "ar": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِلْمُتَّقِينَ",
+      "en": "This is the Book, there is no doubt in it, a guidance to the Godwary,",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002002_ar_husary.mp3",
+          "dur": 10.867
+        },
+        "afasy": {
+          "audio": "audio/002002_ar_afasy.mp3",
+          "dur": 8.96
+        },
+        "sudais": {
+          "audio": "audio/002002_ar_sudais.mp3",
+          "dur": 6.896
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002002_en_v1.mp3",
+          "dur": 3.605
+        },
+        "v2": {
+          "audio": "audio/002002_en_v2.mp3",
+          "dur": 5.564
+        },
+        "celeste": {
+          "audio": "audio/002002_en_celeste.mp3",
+          "dur": 4.467
+        }
+      }
+    },
+    {
+      "ref": "2:3",
+      "ar": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنْفِقُونَ",
+      "en": "who believe in the Unseen, and maintain the prayer, and spend out of what We have provided for them;",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002003_ar_husary.mp3",
+          "dur": 13.897
+        },
+        "afasy": {
+          "audio": "audio/002003_ar_afasy.mp3",
+          "dur": 11.416
+        },
+        "sudais": {
+          "audio": "audio/002003_ar_sudais.mp3",
+          "dur": 10.893
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002003_en_v1.mp3",
+          "dur": 4.937
+        },
+        "v2": {
+          "audio": "audio/002003_en_v2.mp3",
+          "dur": 7.471
+        },
+        "celeste": {
+          "audio": "audio/002003_en_celeste.mp3",
+          "dur": 7.079
+        }
+      }
+    },
+    {
+      "ref": "2:4",
+      "ar": "وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنْزِلَ إِلَيْكَ وَمَا أُنْزِلَ مِنْ قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ",
+      "en": "and who believe in what has been sent down to you and what was sent down before you, and are certain of the Hereafter.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002004_ar_husary.mp3",
+          "dur": 19.644
+        },
+        "afasy": {
+          "audio": "audio/002004_ar_afasy.mp3",
+          "dur": 15.804
+        },
+        "sudais": {
+          "audio": "audio/002004_ar_sudais.mp3",
+          "dur": 12.774
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002004_en_v1.mp3",
+          "dur": 5.878
+        },
+        "v2": {
+          "audio": "audio/002004_en_v2.mp3",
+          "dur": 8.046
+        },
+        "celeste": {
+          "audio": "audio/002004_en_celeste.mp3",
+          "dur": 7.236
+        }
+      }
+    },
+    {
+      "ref": "2:5",
+      "ar": "أُولَٰئِكَ عَلَىٰ هُدًى مِنْ رَبِّهِمْ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+      "en": "Those follow their Lord's guidance, and it is they who are the felicitous.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002005_ar_husary.mp3",
+          "dur": 16.588
+        },
+        "afasy": {
+          "audio": "audio/002005_ar_afasy.mp3",
+          "dur": 11.363
+        },
+        "sudais": {
+          "audio": "audio/002005_ar_sudais.mp3",
+          "dur": 9.691
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002005_en_v1.mp3",
+          "dur": 3.291
+        },
+        "v2": {
+          "audio": "audio/002005_en_v2.mp3",
+          "dur": 4.989
+        },
+        "celeste": {
+          "audio": "audio/002005_en_celeste.mp3",
+          "dur": 5.146
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "ref": null,
+      "title": "General remarks on al-Baqara",
+      "text": "Much of this chapter calls God's servants to believe in all the divine scriptures, drawing no distinction between His messengers. It rebukes the disbelievers, the hypocrites, and some of the People of the Book, and sets out the path of guidance for the God-conscious.",
+      "audio": "audio/day2_note0.mp3",
+      "dur": 19.801,
+      "sources": [
+        "al-Mīzān 1/46"
+      ]
+    },
+    {
+      "ref": "2:1",
+      "title": "The Disconnected Letters",
+      "text": "The opening 'disconnected letters' (<em>al-ḥurūf al-muqaṭṭaʿa</em>) have been read in many ways. Two of the most striking: that they are a secret between God and His Messenger, known only to them; and that, by opening with the very letters of the Arabic alphabet, God signals that this inimitable Qur'an is built from the same letters people use every day — yet none can match it.",
+      "audio": "audio/day2_note1.mp3",
+      "dur": 26.828,
+      "sources": [
+        "al-Ṣāfī 1/90",
+        "Nimūnah 1/62"
+      ]
+    },
+    {
+      "ref": "2:2",
+      "title": "Guidance",
+      "text": "'Guidance' (<em>hidāya</em>) means showing someone the way so that they actually reach the destination; a guide (<em>hādī</em>) leads people and shows them the path. Here, as in many verses, God calls the Qur'an a book of guidance — yet its full guidance is received only by those who come to it with God-consciousness.",
+      "audio": "audio/day2_note2.mp3",
+      "dur": 25.887,
+      "sources": [
+        "al-Kashshāf 1/35",
+        "Majmaʿ al-Bayān 1/65"
+      ]
+    },
+    {
+      "ref": "2:3",
+      "title": "Sustenance is more than food and drink",
+      "text": "'Sustenance' (<em>rizq</em>) is a gift granted continually and in due measure — sometimes used like 'share' (<em>naṣīb</em>) or 'provision' (<em>matāʿ</em>). It is far wider than food and drink: knowledge, faith, and every blessing given to a person according to their needs is part of God's sustenance.",
+      "audio": "audio/day2_note3.mp3",
+      "dur": 22.753,
+      "sources": [
+        "Payām-i Qurʾān 4/307",
+        "Aṭyab al-Bayān 1/210"
+      ]
+    }
+  ]
+}

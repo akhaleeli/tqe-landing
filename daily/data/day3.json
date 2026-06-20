@@ -1,0 +1,407 @@
+{
+  "day": 3,
+  "page": 3,
+  "surah": "al-Baqara",
+  "intro": {
+    "audio": "audio/day3_intro.mp3",
+    "dur": 5.355
+  },
+  "verses": [
+    {
+      "ref": "2:6",
+      "ar": "إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنْذَرْتَهُمْ أَمْ لَمْ تُنْذِرْهُمْ لَا يُؤْمِنُونَ",
+      "en": "As for the faithless, it is the same to them whether you warn them or do not warn them, they will not have faith.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002006_ar_husary.mp3",
+          "dur": 17.345
+        },
+        "afasy": {
+          "audio": "audio/002006_ar_afasy.mp3",
+          "dur": 12.617
+        },
+        "sudais": {
+          "audio": "audio/002006_ar_sudais.mp3",
+          "dur": 15.517
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002006_en_v1.mp3",
+          "dur": 5.46
+        },
+        "v2": {
+          "audio": "audio/002006_en_v2.mp3",
+          "dur": 8.594
+        },
+        "celeste": {
+          "audio": "audio/002006_en_celeste.mp3",
+          "dur": 7.497
+        }
+      }
+    },
+    {
+      "ref": "2:7",
+      "ar": "خَتَمَ اللَّهُ عَلَىٰ قُلُوبِهِمْ وَعَلَىٰ سَمْعِهِمْ وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ وَلَهُمْ عَذَابٌ عَظِيمٌ",
+      "en": "God has set a seal on their hearts and their hearing, and there is a blindfold on their sight, and there is a great punishment for them.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002007_ar_husary.mp3",
+          "dur": 22.779
+        },
+        "afasy": {
+          "audio": "audio/002007_ar_afasy.mp3",
+          "dur": 13.27
+        },
+        "sudais": {
+          "audio": "audio/002007_ar_sudais.mp3",
+          "dur": 12.121
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002007_en_v1.mp3",
+          "dur": 5.982
+        },
+        "v2": {
+          "audio": "audio/002007_en_v2.mp3",
+          "dur": 8.333
+        },
+        "celeste": {
+          "audio": "audio/002007_en_celeste.mp3",
+          "dur": 8.516
+        }
+      }
+    },
+    {
+      "ref": "2:8",
+      "ar": "وَمِنَ النَّاسِ مَنْ يَقُولُ آمَنَّا بِاللَّهِ وَبِالْيَوْمِ الْآخِرِ وَمَا هُمْ بِمُؤْمِنِينَ",
+      "en": "Among the people are those who say, 'We have faith in God and the Last Day,' but they have no faith.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002008_ar_husary.mp3",
+          "dur": 16.718
+        },
+        "afasy": {
+          "audio": "audio/002008_ar_afasy.mp3",
+          "dur": 12.042
+        },
+        "sudais": {
+          "audio": "audio/002008_ar_sudais.mp3",
+          "dur": 11.781
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002008_en_v1.mp3",
+          "dur": 5.381
+        },
+        "v2": {
+          "audio": "audio/002008_en_v2.mp3",
+          "dur": 7.079
+        },
+        "celeste": {
+          "audio": "audio/002008_en_celeste.mp3",
+          "dur": 6.478
+        }
+      }
+    },
+    {
+      "ref": "2:9",
+      "ar": "يُخَادِعُونَ اللَّهَ وَالَّذِينَ آمَنُوا وَمَا يَخْدَعُونَ إِلَّا أَنْفُسَهُمْ وَمَا يَشْعُرُونَ",
+      "en": "They seek to deceive God and those who have faith, yet they deceive no one but themselves, but they are not aware.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002009_ar_husary.mp3",
+          "dur": 16.875
+        },
+        "afasy": {
+          "audio": "audio/002009_ar_afasy.mp3",
+          "dur": 12.565
+        },
+        "sudais": {
+          "audio": "audio/002009_ar_sudais.mp3",
+          "dur": 11.442
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002009_en_v1.mp3",
+          "dur": 5.564
+        },
+        "v2": {
+          "audio": "audio/002009_en_v2.mp3",
+          "dur": 8.359
+        },
+        "celeste": {
+          "audio": "audio/002009_en_celeste.mp3",
+          "dur": 6.922
+        }
+      }
+    },
+    {
+      "ref": "2:10",
+      "ar": "فِي قُلُوبِهِمْ مَرَضٌ فَزَادَهُمُ اللَّهُ مَرَضًا وَلَهُمْ عَذَابٌ أَلِيمٌ بِمَا كَانُوا يَكْذِبُونَ",
+      "en": "There is a sickness in their hearts; then God increased their sickness, and there is a painful punishment for them because of the lies they used to tell.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002010_ar_husary.mp3",
+          "dur": 20.454
+        },
+        "afasy": {
+          "audio": "audio/002010_ar_afasy.mp3",
+          "dur": 13.558
+        },
+        "sudais": {
+          "audio": "audio/002010_ar_sudais.mp3",
+          "dur": 13.401
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002010_en_v1.mp3",
+          "dur": 7.654
+        },
+        "v2": {
+          "audio": "audio/002010_en_v2.mp3",
+          "dur": 10.553
+        },
+        "celeste": {
+          "audio": "audio/002010_en_celeste.mp3",
+          "dur": 8.673
+        }
+      }
+    },
+    {
+      "ref": "2:11",
+      "ar": "وَإِذَا قِيلَ لَهُمْ لَا تُفْسِدُوا فِي الْأَرْضِ قَالُوا إِنَّمَا نَحْنُ مُصْلِحُونَ",
+      "en": "When they are told, 'Do not cause corruption on the earth,' they say, 'We are only reformers!'",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002011_ar_husary.mp3",
+          "dur": 15.02
+        },
+        "afasy": {
+          "audio": "audio/002011_ar_afasy.mp3",
+          "dur": 10.658
+        },
+        "sudais": {
+          "audio": "audio/002011_ar_sudais.mp3",
+          "dur": 9.718
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002011_en_v1.mp3",
+          "dur": 4.571
+        },
+        "v2": {
+          "audio": "audio/002011_en_v2.mp3",
+          "dur": 7.471
+        },
+        "celeste": {
+          "audio": "audio/002011_en_celeste.mp3",
+          "dur": 6.478
+        }
+      }
+    },
+    {
+      "ref": "2:12",
+      "ar": "أَلَا إِنَّهُمْ هُمُ الْمُفْسِدُونَ وَلَٰكِنْ لَا يَشْعُرُونَ",
+      "en": "Look! They are themselves the agents of corruption, but they are not aware.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002012_ar_husary.mp3",
+          "dur": 11.86
+        },
+        "afasy": {
+          "audio": "audio/002012_ar_afasy.mp3",
+          "dur": 9.091
+        },
+        "sudais": {
+          "audio": "audio/002012_ar_sudais.mp3",
+          "dur": 7.445
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002012_en_v1.mp3",
+          "dur": 3.422
+        },
+        "v2": {
+          "audio": "audio/002012_en_v2.mp3",
+          "dur": 6.034
+        },
+        "celeste": {
+          "audio": "audio/002012_en_celeste.mp3",
+          "dur": 4.336
+        }
+      }
+    },
+    {
+      "ref": "2:13",
+      "ar": "وَإِذَا قِيلَ لَهُمْ آمِنُوا كَمَا آمَنَ النَّاسُ قَالُوا أَنُؤْمِنُ كَمَا آمَنَ السُّفَهَاءُ أَلَا إِنَّهُمْ هُمُ السُّفَهَاءُ وَلَٰكِنْ لَا يَعْلَمُونَ",
+      "en": "And when they are told, 'Believe like the people who have believed,' they say, 'Shall we believe like the fools who have believed?' Look! They are themselves the fools, but they do not know.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002013_ar_husary.mp3",
+          "dur": 36.153
+        },
+        "afasy": {
+          "audio": "audio/002013_ar_afasy.mp3",
+          "dur": 24.921
+        },
+        "sudais": {
+          "audio": "audio/002013_ar_sudais.mp3",
+          "dur": 20.376
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002013_en_v1.mp3",
+          "dur": 12.565
+        },
+        "v2": {
+          "audio": "audio/002013_en_v2.mp3",
+          "dur": 13.061
+        },
+        "celeste": {
+          "audio": "audio/002013_en_celeste.mp3",
+          "dur": 12.095
+        }
+      }
+    },
+    {
+      "ref": "2:14",
+      "ar": "وَإِذَا لَقُوا الَّذِينَ آمَنُوا قَالُوا آمَنَّا وَإِذَا خَلَوْا إِلَىٰ شَيَاطِينِهِمْ قَالُوا إِنَّا مَعَكُمْ إِنَّمَا نَحْنُ مُسْتَهْزِئُونَ",
+      "en": "When they meet the faithful, they say, 'We believe,' but when they are alone with their devils, they say, 'We are with you; we were only deriding them.'",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002014_ar_husary.mp3",
+          "dur": 28.029
+        },
+        "afasy": {
+          "audio": "audio/002014_ar_afasy.mp3",
+          "dur": 23.667
+        },
+        "sudais": {
+          "audio": "audio/002014_ar_sudais.mp3",
+          "dur": 15.909
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002014_en_v1.mp3",
+          "dur": 7.68
+        },
+        "v2": {
+          "audio": "audio/002014_en_v2.mp3",
+          "dur": 10.998
+        },
+        "celeste": {
+          "audio": "audio/002014_en_celeste.mp3",
+          "dur": 9.927
+        }
+      }
+    },
+    {
+      "ref": "2:15",
+      "ar": "اللَّهُ يَسْتَهْزِئُ بِهِمْ وَيَمُدُّهُمْ فِي طُغْيَانِهِمْ يَعْمَهُونَ",
+      "en": "It is God who derides them, and leaves them bewildered in their rebellion.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002015_ar_husary.mp3",
+          "dur": 12.042
+        },
+        "afasy": {
+          "audio": "audio/002015_ar_afasy.mp3",
+          "dur": 7.915
+        },
+        "sudais": {
+          "audio": "audio/002015_ar_sudais.mp3",
+          "dur": 7.915
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002015_en_v1.mp3",
+          "dur": 3.474
+        },
+        "v2": {
+          "audio": "audio/002015_en_v2.mp3",
+          "dur": 4.754
+        },
+        "celeste": {
+          "audio": "audio/002015_en_celeste.mp3",
+          "dur": 4.284
+        }
+      }
+    },
+    {
+      "ref": "2:16",
+      "ar": "أُولَٰئِكَ الَّذِينَ اشْتَرَوُا الضَّلَالَةَ بِالْهُدَىٰ فَمَا رَبِحَتْ تِجَارَتُهُمْ وَمَا كَانُوا مُهْتَدِينَ",
+      "en": "They are the ones who bought error for guidance, so their trade did not profit them, nor were they guided.",
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/002016_ar_husary.mp3",
+          "dur": 18.547
+        },
+        "afasy": {
+          "audio": "audio/002016_ar_afasy.mp3",
+          "dur": 12.565
+        },
+        "sudais": {
+          "audio": "audio/002016_ar_sudais.mp3",
+          "dur": 11.389
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/002016_en_v1.mp3",
+          "dur": 4.937
+        },
+        "v2": {
+          "audio": "audio/002016_en_v2.mp3",
+          "dur": 7.288
+        },
+        "celeste": {
+          "audio": "audio/002016_en_celeste.mp3",
+          "dur": 6.426
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "ref": "2:6",
+      "title": "The faithless who refuse guidance",
+      "text": "Here 'those who disbelieve' (<em>alladhīna kafarū</em>) does not mean every non-believer, but those set firmly upon denial — whose hearts are overtaken by hostility to the truth and who spare no effort fighting against God's religion. For such people, warning and admonition no longer make a difference.",
+      "audio": "audio/day3_note0.mp3",
+      "dur": 22.204,
+      "sources": [
+        "al-Mīzān 1/55"
+      ]
+    },
+    {
+      "ref": "2:10",
+      "title": "The heart — the essence of the human being",
+      "text": "When the Qur'an speaks of the 'heart' (<em>qalb</em>), it means the very essence of the human being — their life and soul. Just as the body knows health, sickness, and death, so too does the heart: it can be sound, diseased, or dead. Hypocrisy is a sickness of the heart that, left untreated, only spreads.",
+      "audio": "audio/day3_note1.mp3",
+      "dur": 25.626,
+      "sources": [
+        "al-Mīzān 2/228"
+      ]
+    },
+    {
+      "ref": "2:14",
+      "title": "Shayṭān",
+      "text": "The word 'shayṭān' (<em>shayṭān</em>) means one far removed from goodness — a being of evil. It is not only Iblīs: because he was driven so far from God's mercy, he became the very embodiment of evil, so that 'shayṭān' came to function almost as a proper name for him — though it can describe any rebellious, corrupting force.",
+      "audio": "audio/day3_note2.mp3",
+      "dur": 27.925,
+      "sources": [
+        "al-Kashshāf 1/65",
+        "al-Mīzān 7/331"
+      ]
+    }
+  ]
+}
