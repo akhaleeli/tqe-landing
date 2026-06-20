@@ -16,12 +16,12 @@
     <span class="dhead__badge">Preview</span>
   </header>
   <main class="dwrap">
-    <p class="dintro">A glimpse of Phase 2 — the <em>Daily Qur'an</em>. Each day, a page of
-      the Qur'an: listen to the recitation and its meaning, verse by verse, with the
-      commentary alongside.</p>
+    <h1 class="dpage-title">Daily Qur'an</h1>
+    <p class="dintro">A glimpse of Phase 2. Each day, a page of the Qur'an: listen to the
+      recitation and its meaning, verse by verse, with the commentary alongside.</p>
     <div class="dtabs" id="dtabs"><!-- day buttons injected --></div>
     <div class="dbar">
-      <h1 class="dtitle"><span id="dsurah"></span> <small id="dref"></small></h1>
+      <h2 class="dtitle"><span id="dsurah"></span> <small id="dref"></small></h2>
     </div>
     <div class="player" id="player">
       <button id="playAll" class="player__btn" aria-label="Play page">▶</button>
@@ -30,6 +30,35 @@
       </div>
       <span class="player__time" id="time">0:00 / 0:00</span>
       <button id="speed" class="player__speed" aria-label="Playback speed">1×</button>
+      <button id="gear" class="player__gear" aria-label="Settings">⚙</button>
+      <div class="settings" id="settings" hidden>
+        <label class="settings__row">Recitation
+          <select id="setReciter">
+            <option value="husary">Husary</option>
+            <option value="afasy">Mishary al-Afasy</option>
+            <option value="sudais">Sudais</option>
+          </select>
+        </label>
+        <label class="settings__row">English voice
+          <select id="setVoice">
+            <option value="v1">Voice 1</option>
+            <option value="v2">Voice 2</option>
+            <option value="celeste">Celeste</option>
+          </select>
+        </label>
+        <fieldset class="settings__types">
+          <legend>Play</legend>
+          <label><input type="checkbox" id="tAr" checked> Arabic recitation</label>
+          <label><input type="checkbox" id="tEn" checked> English translation</label>
+          <label><input type="checkbox" id="tCmt" checked> Commentary</label>
+        </fieldset>
+        <label class="settings__row">Order
+          <select id="setOrder">
+            <option value="verses">Verses first, then commentary</option>
+            <option value="interleave">Commentary between verses</option>
+          </select>
+        </label>
+      </div>
     </div>
     <div class="spread">
       <ol class="verses" id="verses"><!-- verses injected --></ol>
