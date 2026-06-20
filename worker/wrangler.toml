@@ -1,0 +1,7 @@
+name = "quraniverse-subscribe"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+[[kv_namespaces]]
+binding = "SUBSCRIBERS"
+id = "84181e11bef44f03b739ab4655fa6005"
