@@ -61,8 +61,11 @@ def build(day, page):
         ndest = f"{OUT_AUDIO}/day{day}_note{i}.mp3"
         if not os.path.exists(ndest):
             commentary.generate(n["narration"], ndest)
+        title = n["title"]
+        if n.get("ref") is None:
+            title = f"General remarks on {SURAH[sura]}"
         out_notes.append({
-            "ref": n.get("ref"), "title": n["title"], "text": n["display"],
+            "ref": n.get("ref"), "title": title, "text": n["display"],
             "audio": f"audio/day{day}_note{i}.mp3",
             "dur": round(audio.duration(ndest), 3),
         })

@@ -56,7 +56,10 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--cream);col
 .note p{font-family:'EB Garamond',serif;color:var(--ink);font-size:1.02rem;margin:0}
 .note__play{margin-top:10px;background:transparent;border:1.5px solid var(--brass);color:var(--navy);border-radius:6px;padding:5px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
 .note__play:hover{background:var(--brass)}
+.note{transition:background .2s,border-color .2s,box-shadow .2s}
+.note:hover{background:#fffdf8;border-color:rgba(201,162,74,.55);cursor:default}
 .note.is-active{border-color:var(--brass);box-shadow:0 2px 12px rgba(14,39,72,.12);background:#fffdf6}
+.verse.is-linked{background:rgba(201,162,74,.10);border-color:rgba(201,162,74,.45)}
 
 .subscribe{margin-top:44px;border-top:1px solid var(--border);padding-top:28px}
 .subscribe h2{font-family:'EB Garamond',serif;color:var(--navy);font-weight:500}

@@ -32,6 +32,7 @@ async function loadDay(n) {
     const li = document.createElement("li");
     li.className = "verse";
     li.dataset.i = i;
+    li.dataset.ref = v.ref;
     li.innerHTML =
       `<div class="verse__ar">${v.ar}</div>` +
       `<div class="verse__en">${v.en}</div>` +
@@ -46,11 +47,17 @@ async function loadDay(n) {
     const art = document.createElement("article");
     art.className = "note";
     art.dataset.ni = i;
+    if (nt.ref) art.dataset.ref = nt.ref;
     const ref = nt.ref ? `<span class="note__ref">${nt.ref}</span>` : "";
     art.innerHTML =
       `<h3>${nt.title}${ref}</h3><p>${nt.text}</p>` +
       `<button class="note__play" type="button">▶ Play</button>`;
     art.querySelector(".note__play").addEventListener("click", () => playNote(i));
+    if (nt.ref) {
+      const linked = () => document.querySelector(`.verse[data-ref="${nt.ref}"]`);
+      art.addEventListener("mouseenter", () => linked() && linked().classList.add("is-linked"));
+      art.addEventListener("mouseleave", () => linked() && linked().classList.remove("is-linked"));
+    }
     panel.appendChild(art);
   });
 
