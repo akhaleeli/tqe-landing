@@ -221,6 +221,7 @@ function cycleSpeed() {
   speedIdx = (speedIdx + 1) % SPEEDS.length;
   audio.playbackRate = speed();
   $("#speed").textContent = `${speed()}×`;
+  saveSettings();
 }
 
 /* ---- settings ---- */
@@ -236,6 +237,20 @@ function applySettings() {
   buildQueue();
   updateBar();
   layoutNotes();
+  saveSettings();
+}
+
+const PREFS_KEY = "qv-daily-prefs";
+function saveSettings() {
+  try { localStorage.setItem(PREFS_KEY, JSON.stringify({ ...settings, speedIdx })); } catch (e) {}
+}
+function loadSettings() {
+  try {
+    const s = JSON.parse(localStorage.getItem(PREFS_KEY) || "{}");
+    for (const k of ["reciter", "voice", "cvoice", "ar", "en", "cmt", "order"])
+      if (s[k] !== undefined) settings[k] = s[k];
+    if (typeof s.speedIdx === "number" && SPEEDS[s.speedIdx] !== undefined) speedIdx = s.speedIdx;
+  } catch (e) {}
 }
 
 /* ---- subscribe ---- */
@@ -272,11 +287,16 @@ function init() {
     s.toggleAttribute("hidden");
     $("#gear").classList.toggle("is-open", !s.hasAttribute("hidden"));
   });
-  // defaults
+  // restore saved preferences and reflect them in the controls
+  loadSettings();
   $("#setReciter").value = settings.reciter;
   $("#setVoice").value = settings.voice;
   $("#setCvoice").value = settings.cvoice;
   $("#setOrder").value = settings.order;
+  $("#tAr").checked = settings.ar;
+  $("#tEn").checked = settings.en;
+  $("#tCmt").checked = settings.cmt;
+  $("#speed").textContent = `${speed()}×`;
   ["setReciter", "setVoice", "setCvoice", "setOrder", "tAr", "tEn", "tCmt"].forEach((id) =>
     $("#" + id).addEventListener("change", applySettings)
   );
