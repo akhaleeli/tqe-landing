@@ -69,18 +69,42 @@ function playStep() {
   if (qi >= queue.length) {
     playing = false;
     clearHL();
+    setPlayBtn();
     return;
   }
   const step = queue[qi];
   highlight(step);
   audio.src = step.src;
   audio.play().catch(() => {});
+  setPlayBtn();
 }
 
 function stop() {
   playing = false;
   audio.pause();
   clearHL();
+  setPlayBtn();
+}
+
+function setPlayBtn() {
+  const b = $("#playAll");
+  if (b) b.textContent = playing ? "⏸ Pause" : "▶ Play page";
+}
+
+function togglePlayAll() {
+  if (playing) {
+    audio.pause();
+    playing = false;
+    setPlayBtn();
+    return;
+  }
+  if (queue.length && qi < queue.length && audio.src) {
+    playing = true; // resume mid-page
+    audio.play().catch(() => {});
+    setPlayBtn();
+  } else {
+    playAll();
+  }
 }
 
 audio.addEventListener("ended", () => {
@@ -139,7 +163,7 @@ function init() {
     b.addEventListener("click", () => loadDay(n));
     tabs.appendChild(b);
   });
-  $("#playAll").addEventListener("click", playAll);
+  $("#playAll").addEventListener("click", togglePlayAll);
   $("#playCmt").addEventListener("click", playCommentary);
   $("#subForm").addEventListener("submit", subscribe);
   loadDay(1);
