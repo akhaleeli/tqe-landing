@@ -1,4 +1,5 @@
-const GAP_MS = 120;
+const GAP_MS = 180; // breath between verse fragments (AR/EN)
+const NOTE_GAP_MS = 650; // longer pause before a commentary note begins
 const DAYS = [1, 2, 3];
 const SPEEDS = [0.75, 1, 1.25, 1.5, 1.75, 2];
 const SPEED_BASE = 1.25; // narration (English + commentary) baseline: "1x" plays at 1.25x
@@ -202,7 +203,8 @@ audio.addEventListener("ended", () => {
   if (!sequence) { playing = false; setPlayBtn(); return; }
   qi++;
   if (qi >= queue.length) { playing = false; clearHL(); setPlayBtn(); return; }
-  setTimeout(playStep, GAP_MS);
+  const gap = queue[qi].mode === "note" ? NOTE_GAP_MS : GAP_MS;
+  setTimeout(playStep, gap);
 });
 
 function togglePlayAll() {
