@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Qur'an: Explained — Daily (Preview)</title>
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=Scheherazade+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="daily.css">
+</head>
+<body>
+  <header class="dhead">
+    <a class="dhead__back" href="/">← The Qur'an: <em>Explained</em></a>
+    <span class="dhead__badge">Preview</span>
+  </header>
+  <main class="dwrap">
+    <p class="dintro">A glimpse of Phase 2 — the <em>Daily Qur'an</em>. Each day, a page of
+      the Qur'an: listen to the recitation and its meaning, verse by verse, then a short
+      reflection.</p>
+    <div class="dtabs" id="dtabs"><!-- day buttons injected --></div>
+    <h1 class="dtitle"><span id="dsurah"></span> <small id="dref"></small></h1>
+    <div class="controls"><button id="playAll" class="btn btn--primary">▶ Play page</button></div>
+    <ol class="verses" id="verses"><!-- verses injected --></ol>
+    <section class="commentary" id="commentary">
+      <h2 id="cmtTitle"></h2>
+      <p id="cmtText"></p>
+      <button id="playCmt" class="btn btn--ghost">▶ Play commentary</button>
+    </section>
+    <section class="subscribe">
+      <h2>Get the daily Qur'an in your inbox</h2>
+      <p class="subscribe__lead">Be the first to know when the Daily Qur'an launches.</p>
+      <form id="subForm">
+        <input type="email" id="subEmail" required placeholder="you@example.com" aria-label="Email address">
+        <button class="btn btn--primary" type="submit">Notify me</button>
+      </form>
+      <p class="subscribe__msg" id="subMsg" role="status"></p>
+    </section>
+  </main>
+  <script src="daily.js" defer></script>
+</body>
+</html>
