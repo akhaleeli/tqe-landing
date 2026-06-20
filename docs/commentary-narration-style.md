@@ -19,6 +19,11 @@ TTS), not necessarily the on-screen display text.
    - ✅ "verse twelve", "the first of three", "fourteen hundred years"
    - ❌ "verse 12", "1 of 3", "1400 years"
 
+3. **Honorifics — expand to the Arabic blessing in Arabic script.** Do not narrate the
+   abbreviations "(saaw)" / "(as)".
+   - Prophet: `(saaw)` → `صَلَّى ٱللَّهُ عَلَيْهِ وَآلِه`
+   - Imams / Infallibles: `(as)` → `عَلَيْهِ ٱلسَّلَام` (singular) or `عَلَيْهِمُ ٱلسَّلَام` (plural)
+
 ## Notes
 
 - **Model:** ElevenLabs **v3** for commentary narration.

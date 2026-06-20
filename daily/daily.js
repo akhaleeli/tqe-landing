@@ -16,8 +16,7 @@ async function loadDay(n) {
   stop();
   $("#dsurah").textContent = data.surah;
   $("#dref").textContent = `· Day ${data.day}`;
-  $("#cmtTitle").textContent = data.commentary.title;
-  $("#cmtText").textContent = data.commentary.text;
+
   const ol = $("#verses");
   ol.innerHTML = "";
   data.verses.forEach((v, i) => {
@@ -31,6 +30,21 @@ async function loadDay(n) {
     li.addEventListener("click", () => playFrom(i));
     ol.appendChild(li);
   });
+
+  const panel = $("#notes");
+  panel.innerHTML = '<h2 class="notes__head">Commentary</h2>';
+  data.notes.forEach((nt, i) => {
+    const art = document.createElement("article");
+    art.className = "note";
+    art.dataset.ni = i;
+    const ref = nt.ref ? `<span class="note__ref">${nt.ref}</span>` : "";
+    art.innerHTML =
+      `<h3>${nt.title}${ref}</h3><p>${nt.text}</p>` +
+      `<button class="note__play" type="button">▶ Play</button>`;
+    art.querySelector(".note__play").addEventListener("click", () => playNote(i));
+    panel.appendChild(art);
+  });
+
   document.querySelectorAll(".dtab").forEach((t) =>
     t.classList.toggle("dtab--active", +t.dataset.n === n)
   );
@@ -42,26 +56,29 @@ function buildQueue() {
     queue.push({ src: v.ar_audio, vi: i, mode: "ar" });
     queue.push({ src: v.en_audio, vi: i, mode: "en" });
   });
-  queue.push({ src: current.commentary.audio, vi: -1, mode: "cmt" });
+  current.notes.forEach((nt, i) => {
+    queue.push({ src: nt.audio, ni: i, mode: "note" });
+  });
 }
 
 function clearHL() {
   document.querySelectorAll(".verse").forEach((e) =>
     e.classList.remove("is-active", "is-speaking-en")
   );
-  $("#commentary").classList.remove("is-active");
+  document.querySelectorAll(".note").forEach((e) => e.classList.remove("is-active"));
 }
 
 function highlight(step) {
   clearHL();
-  if (step.mode === "cmt") {
-    $("#commentary").classList.add("is-active");
-    $("#commentary").scrollIntoView({ block: "center", behavior: "smooth" });
-    return;
+  let el;
+  if (step.mode === "note") {
+    el = document.querySelector(`.note[data-ni="${step.ni}"]`);
+    el.classList.add("is-active");
+  } else {
+    el = document.querySelector(`.verse[data-i="${step.vi}"]`);
+    el.classList.add("is-active");
+    if (step.mode === "en") el.classList.add("is-speaking-en");
   }
-  const el = document.querySelector(`.verse[data-i="${step.vi}"]`);
-  el.classList.add("is-active");
-  if (step.mode === "en") el.classList.add("is-speaking-en");
   el.scrollIntoView({ block: "center", behavior: "smooth" });
 }
 
@@ -127,9 +144,9 @@ function playFrom(i) {
   playStep();
 }
 
-function playCommentary() {
+function playNote(i) {
   buildQueue();
-  qi = queue.length - 1;
+  qi = queue.findIndex((s) => s.mode === "note" && s.ni === i);
   playing = true;
   playStep();
 }
@@ -164,7 +181,6 @@ function init() {
     tabs.appendChild(b);
   });
   $("#playAll").addEventListener("click", togglePlayAll);
-  $("#playCmt").addEventListener("click", playCommentary);
   $("#subForm").addEventListener("submit", subscribe);
   loadDay(1);
 }
