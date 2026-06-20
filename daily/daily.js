@@ -289,6 +289,10 @@ function init() {
     b.addEventListener("click", () => loadDay(n));
     tabs.appendChild(b);
   });
+  $("#heroStart").addEventListener("click", () => {
+    if (!playing) playAll();
+    $(".dbar").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
   $("#playAll").addEventListener("click", togglePlayAll);
   $("#speed").addEventListener("click", cycleSpeed);
   $("#seek").addEventListener("click", (e) => {
