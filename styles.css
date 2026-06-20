@@ -220,6 +220,7 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 .phase--current p { color: rgba(251, 247, 238, 0.85); }
 .phase--current .card__icon { color: var(--navy); background: var(--brass); }
 .phase--planned .card__icon { color: var(--muted); background: rgba(14, 39, 72, 0.05); }
+.phase__preview { margin-top: 14px; font-weight: 500; }
 
 /* --- Sample spread (§4) --- */
 .sample-spread {
