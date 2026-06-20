@@ -1,6 +1,7 @@
 const GAP_MS = 120;
 const DAYS = [1, 2, 3];
-const SPEEDS = [1, 1.25, 1.5, 2];
+const SPEEDS = [0.75, 1, 1.25, 1.5, 1.75, 2];
+const SPEED_BASE = 1.25; // narration (English + commentary) baseline: "1x" plays at 1.25x
 const SUBSCRIBE_URL = "https://quraniverse-subscribe.akh-apps.workers.dev";
 
 const settings = { reciter: "husary", voice: "v2", cvoice: "v2", ar: true, en: true, cmt: true, order: "verses" };
@@ -14,11 +15,14 @@ let playing = false;
 let sequence = true;
 let activeOff = 0;
 let pendingSeek = null;
-let speedIdx = 0;
+let speedIdx = 1; // default label "1x"
+let curMode = "ar";
 const audio = new Audio();
 
 const $ = (s) => document.querySelector(s);
-const speed = () => SPEEDS[speedIdx];
+const speed = () => SPEEDS[speedIdx]; // displayed label
+// Actual playbackRate: recitation at the label rate; narration boosted by SPEED_BASE.
+const rateFor = (mode) => SPEEDS[speedIdx] * (mode === "ar" ? 1 : SPEED_BASE);
 const fmt = (s) => {
   s = Math.max(0, Math.floor(s || 0));
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
@@ -151,8 +155,9 @@ function highlight(step) {
 function playObj(step, off) {
   highlight(step);
   activeOff = off;
+  curMode = step.mode;
   audio.src = step.src;
-  audio.playbackRate = speed();
+  audio.playbackRate = rateFor(step.mode);
   if (pendingSeek != null) {
     const within = pendingSeek; pendingSeek = null;
     const onmeta = () => { try { audio.currentTime = within; } catch (e) {} audio.removeEventListener("loadedmetadata", onmeta); };
@@ -202,9 +207,17 @@ audio.addEventListener("ended", () => {
 
 function togglePlayAll() {
   if (playing) { audio.pause(); playing = false; setPlayBtn(); return; }
-  if (audio.src && qi >= 0 && qi < queue.length && audio.currentTime > 0) {
-    playing = true; audio.play().catch(() => {}); setPlayBtn(); // resume
-  } else { playAll(); }
+  if (qi >= 0 && qi < queue.length && audio.src && audio.currentTime > 0 && !audio.ended) {
+    // resume a paused clip and continue the whole page from here
+    sequence = true; playing = true; audio.play().catch(() => {}); setPlayBtn();
+  } else if (qi >= 0 && audio.src && audio.ended) {
+    // a clicked bit just finished — continue the page from the next item
+    sequence = true; playing = true; qi++;
+    if (qi < queue.length) playStep();
+    else { playing = false; clearHL(); setPlayBtn(); }
+  } else {
+    playAll();
+  }
 }
 function playAll() { sequence = true; qi = 0; playing = true; playStep(); }
 
@@ -219,7 +232,7 @@ function seekTo(ratio) {
 
 function cycleSpeed() {
   speedIdx = (speedIdx + 1) % SPEEDS.length;
-  audio.playbackRate = speed();
+  audio.playbackRate = rateFor(curMode);
   $("#speed").textContent = `${speed()}×`;
   saveSettings();
 }
@@ -240,7 +253,7 @@ function applySettings() {
   saveSettings();
 }
 
-const PREFS_KEY = "qv-daily-prefs";
+const PREFS_KEY = "qv-daily-prefs-v2";
 function saveSettings() {
   try { localStorage.setItem(PREFS_KEY, JSON.stringify({ ...settings, speedIdx })); } catch (e) {}
 }
