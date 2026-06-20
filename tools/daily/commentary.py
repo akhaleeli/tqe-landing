@@ -23,14 +23,14 @@ def narration_of(md_path):
     return m.group(1).strip()
 
 
-def generate(narration_text, dest):
+def generate(narration_text, dest, voice=STEVE_VOICE):
     body = json.dumps({
         "text": narration_text,
         "model_id": EL_MODEL,
         "voice_settings": {"stability": 0.5},
     }).encode("utf-8")
     req = urllib.request.Request(
-        f"https://api.elevenlabs.io/v1/text-to-speech/{STEVE_VOICE}",
+        f"https://api.elevenlabs.io/v1/text-to-speech/{voice}",
         data=body, method="POST",
         headers={"xi-api-key": _key(), "Content-Type": "application/json",
                  "Accept": "audio/mpeg"},

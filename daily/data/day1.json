@@ -4,71 +4,239 @@
   "surah": "al-Fātiḥa",
   "intro": {
     "audio": "audio/day1_intro.mp3",
-    "dur": 5.329
+    "dur": 5.878
   },
   "verses": [
     {
       "ref": "1:1",
       "ar": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
       "en": "In the Name of God, the Infinitely Compassionate, the Absolutely Merciful.",
-      "ar_audio": "audio/001001_ar.mp3",
-      "en_audio": "audio/001001_en.mp3",
-      "ar_dur": 4.911,
-      "en_dur": 3.474
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/001001_ar_husary.mp3",
+          "dur": 4.911
+        },
+        "afasy": {
+          "audio": "audio/001001_ar_afasy.mp3",
+          "dur": 6.06
+        },
+        "sudais": {
+          "audio": "audio/001001_ar_sudais.mp3",
+          "dur": 3.135
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/001001_en_v1.mp3",
+          "dur": 3.474
+        },
+        "v2": {
+          "audio": "audio/001001_en_v2.mp3",
+          "dur": 6.504
+        },
+        "celeste": {
+          "audio": "audio/001001_en_celeste.mp3",
+          "dur": 5.12
+        }
+      }
     },
     {
       "ref": "1:2",
       "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
       "en": "All praise belongs to God, Lord of all the worlds,",
-      "ar_audio": "audio/001002_ar.mp3",
-      "en_audio": "audio/001002_en.mp3",
-      "ar_dur": 5.224,
-      "en_dur": 2.429
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/001002_ar_husary.mp3",
+          "dur": 5.224
+        },
+        "afasy": {
+          "audio": "audio/001002_ar_afasy.mp3",
+          "dur": 5.564
+        },
+        "sudais": {
+          "audio": "audio/001002_ar_sudais.mp3",
+          "dur": 4.545
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/001002_en_v1.mp3",
+          "dur": 2.429
+        },
+        "v2": {
+          "audio": "audio/001002_en_v2.mp3",
+          "dur": 4.545
+        },
+        "celeste": {
+          "audio": "audio/001002_en_celeste.mp3",
+          "dur": 3.918
+        }
+      }
     },
     {
       "ref": "1:3",
       "ar": "الرَّحْمَٰنِ الرَّحِيمِ",
       "en": "The Infinitely Compassionate, the Absolutely Merciful,",
-      "ar_audio": "audio/001003_ar.mp3",
-      "en_audio": "audio/001003_en.mp3",
-      "ar_dur": 3.866,
-      "en_dur": 3.004
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/001003_ar_husary.mp3",
+          "dur": 3.866
+        },
+        "afasy": {
+          "audio": "audio/001003_ar_afasy.mp3",
+          "dur": 4.624
+        },
+        "sudais": {
+          "audio": "audio/001003_ar_sudais.mp3",
+          "dur": 3.161
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/001003_en_v1.mp3",
+          "dur": 3.004
+        },
+        "v2": {
+          "audio": "audio/001003_en_v2.mp3",
+          "dur": 4.571
+        },
+        "celeste": {
+          "audio": "audio/001003_en_celeste.mp3",
+          "dur": 4.101
+        }
+      }
     },
     {
       "ref": "1:4",
       "ar": "مَالِكِ يَوْمِ الدِّينِ",
       "en": "Master of the Day of Recompense.",
-      "ar_audio": "audio/001004_ar.mp3",
-      "en_audio": "audio/001004_en.mp3",
-      "ar_dur": 4.023,
-      "en_dur": 1.384
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/001004_ar_husary.mp3",
+          "dur": 4.023
+        },
+        "afasy": {
+          "audio": "audio/001004_ar_afasy.mp3",
+          "dur": 4.65
+        },
+        "sudais": {
+          "audio": "audio/001004_ar_sudais.mp3",
+          "dur": 3.5
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/001004_en_v1.mp3",
+          "dur": 1.384
+        },
+        "v2": {
+          "audio": "audio/001004_en_v2.mp3",
+          "dur": 2.194
+        },
+        "celeste": {
+          "audio": "audio/001004_en_celeste.mp3",
+          "dur": 2.194
+        }
+      }
     },
     {
       "ref": "1:5",
       "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
       "en": "You alone do we worship, and to You alone do we turn for help.",
-      "ar_audio": "audio/001005_ar.mp3",
-      "en_audio": "audio/001005_en.mp3",
-      "ar_dur": 6.165,
-      "en_dur": 3.056
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/001005_ar_husary.mp3",
+          "dur": 6.165
+        },
+        "afasy": {
+          "audio": "audio/001005_ar_afasy.mp3",
+          "dur": 6.687
+        },
+        "sudais": {
+          "audio": "audio/001005_ar_sudais.mp3",
+          "dur": 4.989
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/001005_en_v1.mp3",
+          "dur": 3.056
+        },
+        "v2": {
+          "audio": "audio/001005_en_v2.mp3",
+          "dur": 5.172
+        },
+        "celeste": {
+          "audio": "audio/001005_en_celeste.mp3",
+          "dur": 4.127
+        }
+      }
     },
     {
       "ref": "1:6",
       "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
       "en": "Guide us on the straight path,",
-      "ar_audio": "audio/001006_ar.mp3",
-      "en_audio": "audio/001006_en.mp3",
-      "ar_dur": 4.754,
-      "en_dur": 1.384
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/001006_ar_husary.mp3",
+          "dur": 4.754
+        },
+        "afasy": {
+          "audio": "audio/001006_ar_afasy.mp3",
+          "dur": 5.59
+        },
+        "sudais": {
+          "audio": "audio/001006_ar_sudais.mp3",
+          "dur": 4.258
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/001006_en_v1.mp3",
+          "dur": 1.384
+        },
+        "v2": {
+          "audio": "audio/001006_en_v2.mp3",
+          "dur": 1.698
+        },
+        "celeste": {
+          "audio": "audio/001006_en_celeste.mp3",
+          "dur": 1.646
+        }
+      }
     },
     {
       "ref": "1:7",
       "ar": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
       "en": "the path of those whom You have blessed, who have not incurred Your wrath, and who are not astray.",
-      "ar_audio": "audio/001007_ar.mp3",
-      "en_audio": "audio/001007_en.mp3",
-      "ar_dur": 14.289,
-      "en_dur": 4.833
+      "ar_audio": {
+        "husary": {
+          "audio": "audio/001007_ar_husary.mp3",
+          "dur": 14.289
+        },
+        "afasy": {
+          "audio": "audio/001007_ar_afasy.mp3",
+          "dur": 13.113
+        },
+        "sudais": {
+          "audio": "audio/001007_ar_sudais.mp3",
+          "dur": 11.703
+        }
+      },
+      "en_audio": {
+        "v1": {
+          "audio": "audio/001007_en_v1.mp3",
+          "dur": 4.833
+        },
+        "v2": {
+          "audio": "audio/001007_en_v2.mp3",
+          "dur": 7.393
+        },
+        "celeste": {
+          "audio": "audio/001007_en_celeste.mp3",
+          "dur": 6.191
+        }
+      }
     }
   ],
   "notes": [
@@ -77,7 +245,7 @@
       "title": "General remarks on al-Fātiḥa",
       "text": "This chapter begins by invoking God's names, 'the Compassionate' (<em>al-Raḥmān</em>) and 'the Merciful' (<em>al-Raḥīm</em>), before praising God and enumerating some of His attributes. It then proclaims that only God is worthy of worship and that aid is to be sought from Him alone, before closing with a supplication for guidance on the part of the reciter. In a few short verses it expounds the three core principles — God, the Resurrection, and Prophethood — that form the bedrock of the entire Qur'anic revelation.",
       "audio": "audio/day1_note0.mp3",
-      "dur": 44.278,
+      "dur": 41.169,
       "sources": [
         "Tasnīm 1/258"
       ]
@@ -87,7 +255,7 @@
       "title": "The Compassionate, the Merciful",
       "text": "'The Compassionate' and 'the Merciful' are two of God's attributes (<em>ṣifāt</em>) and two of His beautiful names (<em>al-asmāʾ al-ḥusnā</em>). It has been said that <em>al-Raḥmān</em> is a noun of intensification (<em>mubālagha</em>) of the root <em>raḥma</em>, mercy: it signifies the copious abundance of divine mercy, encompassing all of God's servants, the good and the bad alike. <em>Al-Raḥīm</em>, by contrast, signifies God's never-ending kindness, reserved for the truly faithful. It is narrated from the Prophet (ṣ): 'God has a hundred mercies. One of these He sent down to the earth and shared among His creatures; it is by this single mercy that they are kind to one another. The ninety-nine that remain are for the Day of Resurrection.' Such traditions enumerate God's mercies only to help us grasp them; in reality His mercy is limitless, beyond all counting.",
       "audio": "audio/day1_note1.mp3",
-      "dur": 70.896,
+      "dur": 66.351,
       "sources": [
         "al-Mīzān 1/21",
         "Majmaʿ al-Bayān 1/54"
@@ -98,7 +266,7 @@
       "title": "Master of the Day of Recompense",
       "text": "God is the master and ruler of this world too. But it is only on the Day of Resurrection that His mastery will be clear for all to see, when the limitations of matter and the apparent forms of governance vanish, so that only God's absolute power remains. As He says in Sūrat al-Ghāfir: 'To whom does the sovereignty belong today? To God, the One, the All-paramount!' A narration from Imam al-Bāqir (as) explains: 'Everything, today or on that day, is in God's hand; but on the Day of Resurrection no authority save God's will remain.' It is related of Imam al-Sajjād (as) that when he recited 'Master of the Day of Recompense', he would repeat it until he was close to losing consciousness.",
       "audio": "audio/day1_note2.mp3",
-      "dur": 59.481,
+      "dur": 66.273,
       "sources": [
         "Qur'an 40:16",
         "Qur'an 82:19",
@@ -111,7 +279,7 @@
       "title": "The Straight Path",
       "text": "'The Straight Path' (<em>al-ṣirāṭ al-mustaqīm</em>) means a road that is clearly visible, wide and straight, without curving or bending in any direction. Here it signifies the religion of worshipping God, the true faith, and following God's commandments devotedly. Some narrations identify 'the Straight Path' as the Qur'an, while others identify it as the Prophet's Household (<em>ahl al-bayt</em>) — the only path, laid down by God, that leads to eternal happiness and is utterly free from error.",
       "audio": "audio/day1_note3.mp3",
-      "dur": 35.448,
+      "dur": 33.933,
       "sources": [
         "Majmaʿ al-Bayān 1/65",
         "Qur'an 6:161"

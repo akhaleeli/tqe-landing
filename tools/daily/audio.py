@@ -3,11 +3,11 @@ import shutil
 import subprocess
 import urllib.request
 
-from tools.daily.config import HUSARY_URL, FRANK_EN_DIR
+from tools.daily.config import MIRROR, FRANK_EN_DIR
 
 
-def husary_url(code):
-    return HUSARY_URL.format(code=code)
+def reciter_url(folder, code):
+    return MIRROR.format(folder=folder, code=code)
 
 
 def fetch(url, dest):

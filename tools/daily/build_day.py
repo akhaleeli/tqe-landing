@@ -2,7 +2,7 @@ import json
 import os
 import sys
 
-from tools.daily.config import PAGES_CSV, REVISED_CSV
+from tools.daily.config import PAGES_CSV, REVISED_CSV, RECITERS, EN_VOICES
 from tools.daily import verses, audio, commentary
 
 SURAH = {1: "al-Fātiḥa", 2: "al-Baqara"}
@@ -23,6 +23,13 @@ def words(n):
     return _TENS[t] + (f"-{_ONES[o]}" if o else "")
 
 
+def _variant(dest, make):
+    """Ensure dest exists (make() builds + trims it), return {audio, dur}."""
+    if not os.path.exists(dest):
+        make()
+    return {"audio": f"audio/{os.path.basename(dest)}", "dur": round(audio.duration(dest), 3)}
+
+
 def build(day, page):
     keys = verses.expand_page(PAGES_CSV, page)
     rows = verses.verse_rows(REVISED_CSV, keys)
@@ -34,21 +41,28 @@ def build(day, page):
     out_verses = []
     for r in rows:
         c = r["code"]
-        ar_dest, en_dest = f"{OUT_AUDIO}/{c}_ar.mp3", f"{OUT_AUDIO}/{c}_en.mp3"
-        if not os.path.exists(ar_dest):
-            audio.fetch(audio.husary_url(c), ar_dest)
-            audio.trim_silence(ar_dest)
-        if not os.path.exists(en_dest):
-            audio.copy_frank(c, en_dest)
-            audio.trim_silence(en_dest)
+        ar_audio = {}
+        for rk, folder in RECITERS.items():
+            dest = f"{OUT_AUDIO}/{c}_ar_{rk}.mp3"
+            def make(folder=folder, dest=dest, c=c):
+                audio.fetch(audio.reciter_url(folder, c), dest)
+                audio.trim_silence(dest)
+            ar_audio[rk] = _variant(dest, make)
+        en_audio = {}
+        for vk, voice in EN_VOICES.items():
+            dest = f"{OUT_AUDIO}/{c}_en_{vk}.mp3"
+            def make(voice=voice, dest=dest, c=c, text=r["en"]):
+                if voice is None:
+                    audio.copy_frank(c, dest)
+                    audio.trim_silence(dest)
+                else:
+                    commentary.generate(text, dest, voice=voice)
+            en_audio[vk] = _variant(dest, make)
         out_verses.append({
             "ref": r["ref"], "ar": r["ar"], "en": r["en"],
-            "ar_audio": f"audio/{c}_ar.mp3", "en_audio": f"audio/{c}_en.mp3",
-            "ar_dur": round(audio.duration(ar_dest), 3),
-            "en_dur": round(audio.duration(en_dest), 3),
+            "ar_audio": ar_audio, "en_audio": en_audio,
         })
 
-    # Intro (played only on "Play page")
     intro_dest = f"{OUT_AUDIO}/day{day}_intro.mp3"
     intro_text = (f"Daily Qur'an. Day {words(day)}. {SURAH_AR[sura]}, "
                   f"verses {words(first_aya)} to {words(last_aya)}.")
@@ -80,8 +94,8 @@ def build(day, page):
     os.makedirs(OUT_DATA, exist_ok=True)
     with open(f"{OUT_DATA}/day{day}.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"wrote {OUT_DATA}/day{day}.json: {len(out_verses)} verses, "
-          f"{len(out_notes)} notes, intro {data['intro']['dur']}s")
+    print(f"wrote {OUT_DATA}/day{day}.json: {len(out_verses)} verses x "
+          f"{len(RECITERS)} reciters / {len(EN_VOICES)} EN voices, {len(out_notes)} notes")
 
 
 if __name__ == "__main__":
