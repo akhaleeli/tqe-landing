@@ -54,6 +54,7 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--cream);col
 .note h3{font-family:'EB Garamond',serif;color:var(--navy);margin:0 0 6px;font-size:1.12rem;font-weight:500}
 .note__ref{color:var(--muted);font-size:.8rem;font-weight:400;font-style:italic;margin-left:6px}
 .note p{font-family:'EB Garamond',serif;color:var(--ink);font-size:1.02rem;margin:0}
+.note__sources{margin-top:8px;font-size:.78rem;color:var(--muted);font-style:italic}
 .note__play{margin-top:10px;background:transparent;border:1.5px solid var(--brass);color:var(--navy);border-radius:6px;padding:5px 12px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
 .note__play:hover{background:var(--brass)}
 .note{transition:background .2s,border-color .2s,box-shadow .2s}

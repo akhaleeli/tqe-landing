@@ -49,8 +49,10 @@ async function loadDay(n) {
     art.dataset.ni = i;
     if (nt.ref) art.dataset.ref = nt.ref;
     const ref = nt.ref ? `<span class="note__ref">${nt.ref}</span>` : "";
+    const src = nt.sources && nt.sources.length
+      ? `<p class="note__sources">Sources: ${nt.sources.join(" · ")}</p>` : "";
     art.innerHTML =
-      `<h3>${nt.title}${ref}</h3><p>${nt.text}</p>` +
+      `<h3>${nt.title}${ref}</h3><p>${nt.text}</p>${src}` +
       `<button class="note__play" type="button">▶ Play</button>`;
     art.querySelector(".note__play").addEventListener("click", () => playNote(i));
     if (nt.ref) {

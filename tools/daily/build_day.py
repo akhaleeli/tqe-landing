@@ -68,6 +68,7 @@ def build(day, page):
             "ref": n.get("ref"), "title": title, "text": n["display"],
             "audio": f"audio/day{day}_note{i}.mp3",
             "dur": round(audio.duration(ndest), 3),
+            "sources": n.get("sources", []),
         })
 
     data = {
