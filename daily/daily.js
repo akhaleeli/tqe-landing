@@ -1,7 +1,7 @@
 const GAP_MS = 120;
 const DAYS = [1, 2, 3];
 const SPEEDS = [1, 1.25, 1.5, 2];
-const SUBSCRIBE_URL = "/subscribe"; // replaced with the Worker URL in Task 11
+const SUBSCRIBE_URL = "https://quraniverse-subscribe.akh-apps.workers.dev";
 
 const settings = { reciter: "husary", voice: "v2", ar: true, en: true, cmt: true, order: "verses" };
 
