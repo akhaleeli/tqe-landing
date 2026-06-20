@@ -152,6 +152,7 @@ function solo(step) {
 function stop() {
   playing = false; sequence = true; qi = 0; activeOff = 0; pendingSeek = null;
   audio.pause();
+  try { audio.currentTime = 0; } catch (e) {} // reset position so next Play starts fresh
   clearHL(); setPlayBtn(); updateBar();
 }
 
