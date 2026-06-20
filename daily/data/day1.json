@@ -2,55 +2,73 @@
   "day": 1,
   "page": 1,
   "surah": "al-Fātiḥa",
+  "intro": {
+    "audio": "audio/day1_intro.mp3",
+    "dur": 5.329
+  },
   "verses": [
     {
       "ref": "1:1",
       "ar": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
       "en": "In the Name of God, the Infinitely Compassionate, the Absolutely Merciful.",
       "ar_audio": "audio/001001_ar.mp3",
-      "en_audio": "audio/001001_en.mp3"
+      "en_audio": "audio/001001_en.mp3",
+      "ar_dur": 4.911,
+      "en_dur": 3.474
     },
     {
       "ref": "1:2",
       "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
       "en": "All praise belongs to God, Lord of all the worlds,",
       "ar_audio": "audio/001002_ar.mp3",
-      "en_audio": "audio/001002_en.mp3"
+      "en_audio": "audio/001002_en.mp3",
+      "ar_dur": 5.224,
+      "en_dur": 2.429
     },
     {
       "ref": "1:3",
       "ar": "الرَّحْمَٰنِ الرَّحِيمِ",
       "en": "The Infinitely Compassionate, the Absolutely Merciful,",
       "ar_audio": "audio/001003_ar.mp3",
-      "en_audio": "audio/001003_en.mp3"
+      "en_audio": "audio/001003_en.mp3",
+      "ar_dur": 3.866,
+      "en_dur": 3.004
     },
     {
       "ref": "1:4",
       "ar": "مَالِكِ يَوْمِ الدِّينِ",
       "en": "Master of the Day of Recompense.",
       "ar_audio": "audio/001004_ar.mp3",
-      "en_audio": "audio/001004_en.mp3"
+      "en_audio": "audio/001004_en.mp3",
+      "ar_dur": 4.023,
+      "en_dur": 1.384
     },
     {
       "ref": "1:5",
       "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
       "en": "You alone do we worship, and to You alone do we turn for help.",
       "ar_audio": "audio/001005_ar.mp3",
-      "en_audio": "audio/001005_en.mp3"
+      "en_audio": "audio/001005_en.mp3",
+      "ar_dur": 6.165,
+      "en_dur": 3.056
     },
     {
       "ref": "1:6",
       "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
       "en": "Guide us on the straight path,",
       "ar_audio": "audio/001006_ar.mp3",
-      "en_audio": "audio/001006_en.mp3"
+      "en_audio": "audio/001006_en.mp3",
+      "ar_dur": 4.754,
+      "en_dur": 1.384
     },
     {
       "ref": "1:7",
       "ar": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
       "en": "the path of those whom You have blessed, who have not incurred Your wrath, and who are not astray.",
       "ar_audio": "audio/001007_ar.mp3",
-      "en_audio": "audio/001007_en.mp3"
+      "en_audio": "audio/001007_en.mp3",
+      "ar_dur": 14.289,
+      "en_dur": 4.833
     }
   ],
   "notes": [
@@ -58,25 +76,29 @@
       "ref": null,
       "title": "General remarks",
       "text": "This chapter begins by invoking God's names, 'the Compassionate' (al-Raḥmān) and 'the Merciful' (al-Raḥīm), before praising God and enumerating some of His attributes. It then proclaims that only God is worthy of worship and that aid is to be sought from Him alone, before closing with a supplication for guidance on the part of the reciter. In a few short verses it expounds the three core principles — God, the Resurrection, and Prophethood — that form the bedrock of the entire Qur'anic revelation.",
-      "audio": "audio/day1_note0.mp3"
+      "audio": "audio/day1_note0.mp3",
+      "dur": 44.278
     },
     {
       "ref": "1:3",
       "title": "The Compassionate, the Merciful",
       "text": "'The Compassionate' and 'the Merciful' are two of God's attributes (ṣifāt) and two of His beautiful names (al-asmāʾ al-ḥusnā). It has been said that al-Raḥmān is a noun of intensification (mubālagha) of the root raḥma, mercy: it signifies the copious abundance of divine mercy, encompassing all of God's servants, the good and the bad alike. Al-Raḥīm, by contrast, signifies God's never-ending kindness, reserved for the truly faithful. It is narrated from the Prophet (ṣ): 'God has a hundred mercies. One of these He sent down to the earth and shared among His creatures; it is by this single mercy that they are kind to one another. The ninety-nine that remain are for the Day of Resurrection.' Such traditions enumerate God's mercies only to help us grasp them; in reality His mercy is limitless, beyond all counting.",
-      "audio": "audio/day1_note1.mp3"
+      "audio": "audio/day1_note1.mp3",
+      "dur": 70.896
     },
     {
       "ref": "1:4",
       "title": "Master of the Day of Recompense",
       "text": "God is the master and ruler of this world too. But it is only on the Day of Resurrection that His mastery will be clear for all to see, when the limitations of matter and the apparent forms of governance vanish, so that only God's absolute power remains. As He says in Sūrat al-Ghāfir: 'To whom does the sovereignty belong today? To God, the One, the All-paramount!' A narration from Imam al-Bāqir (as) explains: 'Everything, today or on that day, is in God's hand; but on the Day of Resurrection no authority save God's will remain.' It is related of Imam al-Sajjād (as) that when he recited 'Master of the Day of Recompense', he would repeat it until he was close to losing consciousness.",
-      "audio": "audio/day1_note2.mp3"
+      "audio": "audio/day1_note2.mp3",
+      "dur": 59.481
     },
     {
       "ref": "1:6",
       "title": "The Straight Path",
       "text": "'The Straight Path' (al-ṣirāṭ al-mustaqīm) means a road that is clearly visible, wide and straight, without curving or bending in any direction. Here it signifies the religion of worshipping God, the true faith, and following God's commandments devotedly. Some narrations identify 'the Straight Path' as the Qur'an, while others identify it as the Prophet's Household (ahl al-bayt) — the only path, laid down by God, that leads to eternal happiness and is utterly free from error.",
-      "audio": "audio/day1_note3.mp3"
+      "audio": "audio/day1_note3.mp3",
+      "dur": 35.448
     }
   ]
 }

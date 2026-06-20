@@ -22,7 +22,14 @@
     <div class="dtabs" id="dtabs"><!-- day buttons injected --></div>
     <div class="dbar">
       <h1 class="dtitle"><span id="dsurah"></span> <small id="dref"></small></h1>
-      <button id="playAll" class="btn btn--primary">▶ Play page</button>
+    </div>
+    <div class="player" id="player">
+      <button id="playAll" class="player__btn" aria-label="Play page">▶</button>
+      <div class="player__bar" id="seek" role="slider" aria-label="Seek" tabindex="0">
+        <div class="player__fill" id="fill"></div>
+      </div>
+      <span class="player__time" id="time">0:00 / 0:00</span>
+      <button id="speed" class="player__speed" aria-label="Playback speed">1×</button>
     </div>
     <div class="spread">
       <ol class="verses" id="verses"><!-- verses injected --></ol>

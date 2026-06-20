@@ -1,14 +1,23 @@
-const GAP_MS = 200;
+const GAP_MS = 120;
 const DAYS = [1, 2, 3];
+const SPEEDS = [1, 1.25, 1.5, 2];
 const SUBSCRIBE_URL = "/subscribe"; // replaced with the Worker URL in Task 11
 
 let current = null;
 let queue = [];
+let total = 0;
 let qi = 0;
 let playing = false;
+let speedIdx = 0;
+let pendingSeek = null;
 const audio = new Audio();
 
 const $ = (s) => document.querySelector(s);
+const speed = () => SPEEDS[speedIdx];
+const fmt = (s) => {
+  s = Math.max(0, Math.floor(s || 0));
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+};
 
 async function loadDay(n) {
   const data = await (await fetch(`data/day${n}.json`)).json();
@@ -48,17 +57,22 @@ async function loadDay(n) {
   document.querySelectorAll(".dtab").forEach((t) =>
     t.classList.toggle("dtab--active", +t.dataset.n === n)
   );
+  buildQueue();
+  updateBar();
 }
 
 function buildQueue() {
-  queue = [];
+  queue = [{ src: current.intro.audio, mode: "intro", dur: current.intro.dur }];
   current.verses.forEach((v, i) => {
-    queue.push({ src: v.ar_audio, vi: i, mode: "ar" });
-    queue.push({ src: v.en_audio, vi: i, mode: "en" });
+    queue.push({ src: v.ar_audio, vi: i, mode: "ar", dur: v.ar_dur });
+    queue.push({ src: v.en_audio, vi: i, mode: "en", dur: v.en_dur });
   });
   current.notes.forEach((nt, i) => {
-    queue.push({ src: nt.audio, ni: i, mode: "note" });
+    queue.push({ src: nt.audio, ni: i, mode: "note", dur: nt.dur });
   });
+  let off = 0;
+  queue.forEach((s) => { s.off = off; off += s.dur; });
+  total = off;
 }
 
 function clearHL() {
@@ -70,16 +84,29 @@ function clearHL() {
 
 function highlight(step) {
   clearHL();
-  let el;
+  let el = null;
   if (step.mode === "note") {
     el = document.querySelector(`.note[data-ni="${step.ni}"]`);
-    el.classList.add("is-active");
-  } else {
+    if (el) el.classList.add("is-active");
+  } else if (step.mode === "ar" || step.mode === "en") {
     el = document.querySelector(`.verse[data-i="${step.vi}"]`);
-    el.classList.add("is-active");
-    if (step.mode === "en") el.classList.add("is-speaking-en");
+    if (el) {
+      el.classList.add("is-active");
+      if (step.mode === "en") el.classList.add("is-speaking-en");
+    }
   }
-  el.scrollIntoView({ block: "center", behavior: "smooth" });
+  if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+
+function elapsed() {
+  const step = queue[qi];
+  return (step ? step.off : 0) + (audio.currentTime || 0);
+}
+
+function updateBar() {
+  const e = playing || audio.currentTime ? elapsed() : (queue[qi] ? queue[qi].off : 0);
+  $("#fill").style.width = total ? `${(e / total) * 100}%` : "0%";
+  $("#time").textContent = `${fmt(e)} / ${fmt(total)}`;
 }
 
 function playStep() {
@@ -87,11 +114,22 @@ function playStep() {
     playing = false;
     clearHL();
     setPlayBtn();
+    updateBar();
     return;
   }
   const step = queue[qi];
   highlight(step);
   audio.src = step.src;
+  audio.playbackRate = speed();
+  if (pendingSeek != null) {
+    const within = pendingSeek;
+    pendingSeek = null;
+    const onmeta = () => {
+      try { audio.currentTime = within; } catch (e) {}
+      audio.removeEventListener("loadedmetadata", onmeta);
+    };
+    audio.addEventListener("loadedmetadata", onmeta);
+  }
   audio.play().catch(() => {});
   setPlayBtn();
 }
@@ -99,13 +137,15 @@ function playStep() {
 function stop() {
   playing = false;
   audio.pause();
+  qi = 0;
+  pendingSeek = null;
   clearHL();
   setPlayBtn();
 }
 
 function setPlayBtn() {
   const b = $("#playAll");
-  if (b) b.textContent = playing ? "⏸ Pause" : "▶ Play page";
+  if (b) b.textContent = playing ? "⏸" : "▶";
 }
 
 function togglePlayAll() {
@@ -116,7 +156,7 @@ function togglePlayAll() {
     return;
   }
   if (queue.length && qi < queue.length && audio.src) {
-    playing = true; // resume mid-page
+    playing = true; // resume
     audio.play().catch(() => {});
     setPlayBtn();
   } else {
@@ -129,26 +169,40 @@ audio.addEventListener("ended", () => {
   if (!playing) return;
   setTimeout(playStep, GAP_MS);
 });
+audio.addEventListener("timeupdate", updateBar);
 
 function playAll() {
-  buildQueue();
   qi = 0;
   playing = true;
   playStep();
 }
 
 function playFrom(i) {
-  buildQueue();
-  qi = queue.findIndex((s) => s.vi === i);
+  qi = queue.findIndex((s) => s.vi === i && s.mode === "ar");
   playing = true;
   playStep();
 }
 
 function playNote(i) {
-  buildQueue();
   qi = queue.findIndex((s) => s.mode === "note" && s.ni === i);
   playing = true;
   playStep();
+}
+
+function seekTo(ratio) {
+  if (!total) return;
+  const target = Math.min(total - 0.05, Math.max(0, ratio * total));
+  const k = queue.findIndex((s) => target >= s.off && target < s.off + s.dur);
+  qi = k < 0 ? queue.length - 1 : k;
+  pendingSeek = target - queue[qi].off;
+  playing = true;
+  playStep();
+}
+
+function cycleSpeed() {
+  speedIdx = (speedIdx + 1) % SPEEDS.length;
+  audio.playbackRate = speed();
+  $("#speed").textContent = `${speed()}×`;
 }
 
 async function subscribe(e) {
@@ -181,6 +235,11 @@ function init() {
     tabs.appendChild(b);
   });
   $("#playAll").addEventListener("click", togglePlayAll);
+  $("#speed").addEventListener("click", cycleSpeed);
+  $("#seek").addEventListener("click", (e) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    seekTo((e.clientX - r.left) / r.width);
+  });
   $("#subForm").addEventListener("submit", subscribe);
   loadDay(1);
 }

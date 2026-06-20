@@ -25,7 +25,7 @@ def copy_frank(code, dest):
     shutil.copyfile(src, dest)
 
 
-def _duration(path):
+def duration(path):
     out = subprocess.run(
         ["ffprobe", "-v", "error", "-show_entries", "format=duration",
          "-of", "csv=p=0", path],
@@ -36,8 +36,10 @@ def _duration(path):
 
 def trim_silence(path):
     # Trim leading + trailing silence only (not internal pauses) via the
-    # reverse-trim-reverse idiom. start_periods=1 acts only at the stream start.
-    flt = "silenceremove=start_periods=1:start_duration=0.1:start_threshold=-45dB"
+    # reverse-trim-reverse idiom, leaving ~120ms of lead/tail (start_silence) so soft
+    # onsets are never clipped and each clip has a gentle breath.
+    flt = ("silenceremove=start_periods=1:start_duration=0.05:"
+           "start_threshold=-45dB:start_silence=0.12")
     tmp = path + ".trim.mp3"
     subprocess.run([
         "ffmpeg", "-y", "-i", path,
@@ -45,4 +47,4 @@ def trim_silence(path):
         tmp,
     ], check=True, capture_output=True)
     os.replace(tmp, path)
-    return _duration(path)
+    return duration(path)
