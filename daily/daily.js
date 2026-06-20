@@ -55,8 +55,10 @@ function buildQueue() {
 async function loadDay(n) {
   current = await (await fetch(`data/day${n}.json`)).json();
   stop();
-  $("#dsurah").textContent = current.surah;
-  $("#dref").textContent = `· Day ${current.day}`;
+  const first = current.verses[0].ref.split(":")[1];
+  const last = current.verses[current.verses.length - 1].ref.split(":")[1];
+  $("#dsurah").textContent = `Sūrat ${current.surah}`;
+  $("#dref").textContent = `· Verses ${first}–${last}`;
 
   const ol = $("#verses");
   ol.innerHTML = "";
@@ -236,7 +238,11 @@ function init() {
     const r = e.currentTarget.getBoundingClientRect();
     seekTo((e.clientX - r.left) / r.width);
   });
-  $("#gear").addEventListener("click", () => $("#settings").toggleAttribute("hidden"));
+  $("#gear").addEventListener("click", () => {
+    const s = $("#settings");
+    s.toggleAttribute("hidden");
+    $("#gear").classList.toggle("is-open", !s.hasAttribute("hidden"));
+  });
   // defaults
   $("#setReciter").value = settings.reciter;
   $("#setVoice").value = settings.voice;

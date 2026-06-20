@@ -6,6 +6,9 @@ from tools.daily.config import PAGES_CSV, REVISED_CSV, RECITERS, EN_VOICES
 from tools.daily import verses, audio, commentary
 
 SURAH = {1: "al-Fātiḥa", 2: "al-Baqara"}
+# Display-text overrides where the source CSV English is in Arabic script (disconnected
+# letters). Audio is unchanged (it already recites the letters correctly).
+EN_OVERRIDES = {"2:1": "Alif – Lām – Mīm"}
 SURAH_AR = {1: "سُورَةُ ٱلْفَاتِحَة", 2: "سُورَةُ ٱلْبَقَرَة"}
 OUT_DATA, OUT_AUDIO = "daily/data", "daily/audio"
 
@@ -59,7 +62,8 @@ def build(day, page):
                     commentary.generate(text, dest, voice=voice)
             en_audio[vk] = _variant(dest, make)
         out_verses.append({
-            "ref": r["ref"], "ar": r["ar"], "en": r["en"],
+            "ref": r["ref"], "ar": r["ar"],
+            "en": EN_OVERRIDES.get(r["ref"], r["en"]),
             "ar_audio": ar_audio, "en_audio": en_audio,
         })
 
