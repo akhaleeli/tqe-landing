@@ -93,4 +93,8 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--cream);col
 .subscribe form{display:flex;gap:8px;max-width:460px;margin:14px auto 0}
 .subscribe input{flex:1;padding:11px 12px;border:1px solid var(--border);border-radius:6px;font:inherit}
 .subscribe__msg{color:var(--muted);font-size:.9rem;min-height:1.2em;margin-top:8px}
+.dfoot{text-align:center;padding:30px 24px 56px;color:var(--muted);font-size:.92rem}
+.dfoot a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--brass)}
+.dfoot a:hover{color:var(--brass)}
+.dfoot__small{font-size:.8rem;margin-top:8px}
 @media(max-width:560px){.verse__ar{font-size:1.6rem;line-height:2.3}.subscribe form{flex-direction:column}}
