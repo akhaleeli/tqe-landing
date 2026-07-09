@@ -505,6 +505,58 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
   color: rgba(251, 247, 238, 0.82); margin: 28px auto 0;
 }
 
+.support__grid--2 { grid-template-columns: repeat(2, 1fr); max-width: 820px; margin-inline: auto; }
+@media (max-width: 760px) { .support__grid--2 { grid-template-columns: 1fr; } }
+.donate-card--accent { background: rgba(201, 162, 74, 0.12); border-color: rgba(201, 162, 74, 0.5); }
+.donate-card--accent h3 { color: var(--brass); }
+
+/* --- Region tabs --- */
+.region-tabs {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  margin: 0 auto 32px; max-width: 640px;
+}
+.region-tab {
+  padding: 9px 20px; border-radius: 999px;
+  border: 1px solid var(--border-on-navy); background: transparent;
+  color: rgba(251, 247, 238, 0.82); font: inherit; font-size: 0.9375rem;
+  cursor: pointer; transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+.region-tab:hover { border-color: var(--brass); color: var(--cream); }
+.region-tab--active { background: var(--brass); color: var(--navy); border-color: var(--brass); font-weight: 600; }
+.region-panel.is-hidden { display: none; }
+
+/* --- Partner charities strip --- */
+.partners { background: var(--cream); padding-block: 48px; }
+.partners__eyebrow {
+  text-align: center; font-size: 0.8125rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 28px;
+}
+.partners__row {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch;
+  gap: 24px;
+}
+.partner {
+  display: flex; align-items: center; gap: 16px;
+  background: #fff; border: 1px solid var(--border); border-radius: 10px;
+  padding: 18px 26px; box-shadow: var(--shadow-sm);
+}
+.partner__logo {
+  flex: none; width: 96px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+}
+.partner__logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.partner__name {
+  font-family: var(--font-display); font-size: 1.125rem; color: var(--navy); line-height: 1.25;
+}
+.partner__name span {
+  display: block; font-family: var(--font-body); font-size: 0.8125rem;
+  color: var(--muted); letter-spacing: 0.02em; margin-top: 2px;
+}
+@media (max-width: 560px) {
+  .partners__row { flex-direction: column; align-items: stretch; }
+  .partner { justify-content: flex-start; }
+}
+
 /* --- Footer --- */
 .footer { background: var(--cream); padding-block: 56px; border-top: 1px solid var(--border); }
 .footer__inner { text-align: center; }

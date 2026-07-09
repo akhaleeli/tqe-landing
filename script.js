@@ -46,6 +46,21 @@
   });
 })();
 
+// Region tabs for "How to support"
+(function regionTabs() {
+  const tabs = document.querySelectorAll('.region-tab');
+  const panels = document.querySelectorAll('.region-panel');
+  if (!tabs.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const region = tab.dataset.region;
+      tabs.forEach(t => t.classList.toggle('region-tab--active', t === tab));
+      panels.forEach(p => p.classList.toggle('is-hidden', p.dataset.region !== region));
+    });
+  });
+})();
+
 // Fade-and-rise reveals
 (function scrollReveal() {
   const targets = document.querySelectorAll('.section, .hero__text, .hero__visual');

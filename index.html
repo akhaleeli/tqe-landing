@@ -308,42 +308,118 @@
   </div>
 </section>
 
+<section class="section partners" id="partners-strip">
+  <div class="container">
+    <p class="partners__eyebrow">In partnership with</p>
+    <div class="partners__row">
+      <div class="partner">
+        <div class="partner__logo"><img src="assets/partners/cfh.png" alt="Compassion for Humanity logo" loading="lazy"></div>
+        <div class="partner__name">Compassion for Humanity <span>United Kingdom</span></div>
+      </div>
+      <div class="partner">
+        <div class="partner__logo"><img src="assets/partners/nasimco.png" alt="NASIMCO logo" loading="lazy"></div>
+        <div class="partner__name">NASIMCO <span>United States &amp; Canada</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section section--navy support" id="support">
   <div class="container">
     <div class="section__head section__head--centered">
       <h2>How to support</h2>
-      <p class="lead">Donations are routed through our registered partner charity, <strong>Compassion for Humanity</strong>.</p>
+      <p class="lead">Choose your region — donations are routed through our registered partner charities.</p>
     </div>
-    <div class="support__grid">
-      <article class="donate-card">
-        <h3>Bank transfer</h3>
-        <dl class="bank">
-          <div><dt>Account name</dt><dd><button class="copy" data-copy="Compassion for Humanity">Compassion for Humanity</button></dd></div>
-          <div><dt>Bank</dt><dd><button class="copy" data-copy="Lloyds Bank">Lloyds Bank</button></dd></div>
-          <div><dt>Account no.</dt><dd><button class="copy" data-copy="21451960">21451960</button></dd></div>
-          <div><dt>Sort code</dt><dd><button class="copy" data-copy="30-54-66">30-54-66</button></dd></div>
-          <div><dt>Reference</dt><dd><button class="copy" data-copy="Tafsir Project">Tafsir Project</button></dd></div>
-        </dl>
-        <p class="donate-card__note"><em>Click any line to copy.</em></p>
-      </article>
-      <article class="donate-card">
-        <h3>Online</h3>
-        <p>Donate via our partner charity's online portal.</p>
-        <a href="https://sad.qa/Qurancommentary" class="btn btn--primary" target="_blank" rel="noopener">Donate online</a>
-      </article>
-      <article class="donate-card">
-        <h3>PayPal</h3>
-        <p>Direct PayPal donation, suitable for international supporters.</p>
-        <a href="https://www.paypal.com/donate/?hosted_button_id=RLCNCZCY9FR7C" class="btn btn--primary" target="_blank" rel="noopener">Donate via PayPal</a>
-      </article>
-      <article class="donate-card">
-        <h3>Gift Aid</h3>
-        <p>UK taxpayers — boost your donation by 25% at no extra cost.</p>
-        <a href="https://compassionforhumanity.org.uk/gift_aid" class="btn btn--primary" target="_blank" rel="noopener">Claim Gift Aid</a>
-      </article>
+
+    <div class="region-tabs" id="regionTabs" role="tablist">
+      <button class="region-tab region-tab--active" data-region="uk" type="button">United Kingdom</button>
+      <button class="region-tab" data-region="us" type="button">United States</button>
+      <button class="region-tab" data-region="ca" type="button">Canada</button>
+      <button class="region-tab" data-region="intl" type="button">International</button>
     </div>
+
+    <!-- United Kingdom -->
+    <div class="region-panel" data-region="uk">
+      <div class="support__grid">
+        <article class="donate-card">
+          <h3>Bank transfer</h3>
+          <dl class="bank">
+            <div><dt>Account name</dt><dd><button class="copy" data-copy="Compassion for Humanity">Compassion for Humanity</button></dd></div>
+            <div><dt>Bank</dt><dd><button class="copy" data-copy="Lloyds Bank">Lloyds Bank</button></dd></div>
+            <div><dt>Account no.</dt><dd><button class="copy" data-copy="21451960">21451960</button></dd></div>
+            <div><dt>Sort code</dt><dd><button class="copy" data-copy="30-54-66">30-54-66</button></dd></div>
+            <div><dt>Reference</dt><dd><button class="copy" data-copy="Tafsir Project">Tafsir Project</button></dd></div>
+          </dl>
+          <p class="donate-card__note"><em>Click any line to copy.</em></p>
+        </article>
+        <article class="donate-card">
+          <h3>Online</h3>
+          <p>Donate via our partner charity's online portal.</p>
+          <a href="https://sad.qa/Qurancommentary" class="btn btn--primary" target="_blank" rel="noopener">Donate online</a>
+        </article>
+        <article class="donate-card">
+          <h3>Gift Aid</h3>
+          <p>UK taxpayers — boost your donation by 25% at no extra cost.</p>
+          <a href="https://compassionforhumanity.org.uk/gift_aid" class="btn btn--primary" target="_blank" rel="noopener">Claim Gift Aid</a>
+        </article>
+      </div>
+    </div>
+
+    <!-- United States — DRAFT NASIMCO/Fidelity details, PENDING CONFIRMATION -->
+    <div class="region-panel is-hidden" data-region="us">
+      <div class="support__grid support__grid--2">
+        <article class="donate-card">
+          <h3>Via NASIMCO (Fidelity Charitable)</h3>
+          <p>US supporters can make a tax-deductible donation through our partner <strong>NASIMCO</strong> using their Fidelity Charitable account.</p>
+          <dl class="bank">
+            <div><dt>Recipient</dt><dd><button class="copy" data-copy="NASIMCO">NASIMCO</button></dd></div>
+            <div><dt>Tax ID (EIN)</dt><dd><button class="copy" data-copy="20-1696247">20-1696247</button></dd></div>
+            <div><dt>Fidelity grant no.</dt><dd><button class="copy" data-copy="25948076">25948076</button></dd></div>
+          </dl>
+          <p class="donate-card__note"><em>Details to be confirmed.</em></p>
+        </article>
+        <article class="donate-card donate-card--accent">
+          <h3>Please tell us</h3>
+          <p>After donating via NASIMCO, <strong>email us</strong> so we can attribute your gift to The Qur'an: Explained.</p>
+          <a href="mailto:info@quraniverse.io?subject=NASIMCO%20donation%20%E2%80%94%20The%20Qur'an:%20Explained" class="btn btn--primary">Email us your donation</a>
+        </article>
+      </div>
+    </div>
+
+    <!-- Canada — NASIMCO Canada details PENDING -->
+    <div class="region-panel is-hidden" data-region="ca">
+      <div class="support__grid support__grid--2">
+        <article class="donate-card">
+          <h3>Via NASIMCO Canada</h3>
+          <p>Canadian supporters can make a tax-deductible donation through our partner <strong>NASIMCO</strong> in Canada.</p>
+          <p class="donate-card__note"><em>Donation details to be confirmed.</em></p>
+        </article>
+        <article class="donate-card donate-card--accent">
+          <h3>Please tell us</h3>
+          <p>After donating via NASIMCO, <strong>email us</strong> so we can attribute your gift to The Qur'an: Explained.</p>
+          <a href="mailto:info@quraniverse.io?subject=NASIMCO%20Canada%20donation%20%E2%80%94%20The%20Qur'an:%20Explained" class="btn btn--primary">Email us your donation</a>
+        </article>
+      </div>
+    </div>
+
+    <!-- International -->
+    <div class="region-panel is-hidden" data-region="intl">
+      <div class="support__grid support__grid--2">
+        <article class="donate-card">
+          <h3>PayPal</h3>
+          <p>Direct PayPal donation, suitable for supporters worldwide.</p>
+          <a href="https://www.paypal.com/donate/?hosted_button_id=RLCNCZCY9FR7C" class="btn btn--primary" target="_blank" rel="noopener">Donate via PayPal</a>
+        </article>
+        <article class="donate-card">
+          <h3>Online</h3>
+          <p>Donate via our partner charity's online portal.</p>
+          <a href="https://sad.qa/Qurancommentary" class="btn btn--primary" target="_blank" rel="noopener">Donate online</a>
+        </article>
+      </div>
+    </div>
+
     <p class="support__contact">Questions about the project or your donation? Email <a href="mailto:info@quraniverse.io" class="inline-link">info@quraniverse.io</a></p>
-    <p class="support__footnote">Compassion for Humanity &nbsp;·&nbsp; UK Registered Charity No.&nbsp;1194528 &nbsp;·&nbsp; Donations are Gift Aid eligible and tax-deductible for businesses.</p>
+    <p class="support__footnote">Compassion for Humanity — UK Reg. Charity No.&nbsp;1194528 &nbsp;·&nbsp; NASIMCO — US &amp; Canada &nbsp;·&nbsp; Donations may be tax-deductible in your region.</p>
   </div>
 </section>
   </main>
