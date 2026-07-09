@@ -3,7 +3,7 @@
 body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5}
 .dhead{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:var(--navy);color:var(--cream);position:sticky;top:0;z-index:10}
 .dhead__back{color:var(--cream);text-decoration:none;font-family:'EB Garamond',serif;font-size:1.05rem}
-.dhead__back em{color:var(--brass);font-style:italic}
+.dhead__back em{color:var(--brass);font-style:normal}
 .dhead__badge{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;background:var(--brass);color:var(--navy);padding:3px 10px;border-radius:999px;font-weight:600}
 .dwrap{max-width:1180px;margin:0 auto;padding:32px 24px 96px}
 .dhero{background:radial-gradient(900px 460px at 50% -12%, rgba(201,162,74,.20), rgba(201,162,74,0) 62%), var(--navy);color:var(--cream);text-align:center;padding:52px 24px 58px}

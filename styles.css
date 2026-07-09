@@ -557,6 +557,36 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
   .partner { justify-content: flex-start; }
 }
 
+/* --- Daily Qur'an preview band --- */
+.daily-band__inner {
+  display: grid; grid-template-columns: 1fr 1.12fr; gap: 52px; align-items: center;
+}
+.daily-band__eyebrow {
+  color: var(--brass); text-transform: uppercase; letter-spacing: 0.14em;
+  font-size: 0.8125rem; font-weight: 600; margin-bottom: 14px;
+}
+.daily-band__text h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.12; }
+.daily-band__text .lead { margin-top: 16px; }
+.daily-band__cta { margin-top: 26px; }
+.daily-band__note { font-size: 0.85rem; color: rgba(251, 247, 238, 0.6); margin-top: 14px; }
+.daily-band__shot {
+  display: block; border-radius: 14px; overflow: hidden;
+  border: 1px solid rgba(251, 247, 238, 0.14);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.42);
+  transform: perspective(1400px) rotateY(-5deg);
+  transition: transform 450ms ease, box-shadow 450ms ease;
+}
+.daily-band__shot:hover {
+  transform: perspective(1400px) rotateY(0deg) translateY(-4px);
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.5);
+}
+.daily-band__shot img { display: block; width: 100%; height: auto; }
+@media (max-width: 860px) {
+  .daily-band__inner { grid-template-columns: 1fr; gap: 34px; }
+  .daily-band__shot { transform: none; }
+  .daily-band__shot:hover { transform: translateY(-4px); }
+}
+
 /* --- Footer --- */
 .footer { background: var(--cream); padding-block: 56px; border-top: 1px solid var(--border); }
 .footer__inner { text-align: center; }
