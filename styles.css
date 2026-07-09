@@ -161,7 +161,8 @@ a.inline-link:hover::after { transform: scaleX(1); transform-origin: left; }
 .hero h1 .accent { color: var(--brass); }
 .hero .lead { max-width: 48ch; margin-inline: auto; margin-bottom: 36px; }
 @media (min-width: 881px) { .hero .lead { margin-inline: 0; } }
-.hero__cta { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero__cta { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero__cta .btn { padding: 10px 15px; font-size: 0.8125rem; letter-spacing: 0; }
 @media (max-width: 880px) { .hero__cta { justify-content: center; } }
 .hero__visual { display: flex; justify-content: center; perspective: 1200px; }
 .hero__cover {
